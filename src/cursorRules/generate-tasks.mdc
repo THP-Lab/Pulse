@@ -3,6 +3,11 @@ description:
 globs: 
 alwaysApply: false
 ---
+---
+description: 
+globs: 
+alwaysApply: false
+---
 # Règles Cursor pour la génération de tâches - Projet Pulsy
 
 ## Contexte du projet
@@ -276,4 +281,3 @@ docs: mettre à jour la documentation des composants
 - Taux d'erreur < 1%
 - Taux de completion > 90%
 - Satisfaction utilisateur > 4.5/5
-

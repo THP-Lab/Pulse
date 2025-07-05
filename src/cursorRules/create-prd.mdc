@@ -3,6 +3,11 @@ description:
 globs: 
 alwaysApply: false
 ---
+---
+description: 
+globs: 
+alwaysApply: false
+---
 # Règles Cursor pour la création de PRD - Projet Pulsy
 
 ## Contexte du projet

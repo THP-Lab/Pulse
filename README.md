@@ -1,10 +1,10 @@
-# 🚀 Pulse – Interactive Web3 Referendum Application
+# 🚀 Pulse for the Ethereum Applications
 
 ## 🎯 Project Overview
 
 **Pulse** is a next-generation Web3 application designed to transform how communities and organizations interact through voting. Built to be engaging, accessible, and secure, Pulse enables companies to capture real-time sentiment from their users — turning passive audiences into active participants.
 
-The app is fully integrated with the **Worldcoin MiniApp Marketplace** via the **Worldcoin Minikit**, and leverages the **Intuition.system protocol** to contribute to the building of decentralized online reputation. Pulse doesn't just capture opinions — it anchors them to a verifiable, trust-based system.
+The app is fully integrated with the **Worldcoin MiniApp Marketplace** via the **Worldcoin Minikit**, and leverages the **Intuition.system protocol** to contribute to the building of decentralized online reputation with the Intuition protocol. Pulse doesn't just capture opinions — it anchors them to a verifiable, trust-based system.
 
 ## 🔗 Key Integrations & Reputation Framework
 
@@ -58,12 +58,6 @@ Through this system, **Pulse goes beyond polling** — it builds a **transparent
 - **Vite**: Lightning-fast build and dev server.
 - **Worldcoin Minikit**: Seamless MiniApp integration.
 - **Intuition SDK**: Real-time triplet generation and publication.
-
-## 💰 Token Ecosystem
-
-- **Earn While Participating**: Tokens distributed for each vote.
-- **Circular Economy**: Tokens can be used to submit community questions.
-- **Gamification**: Incentives encourage daily engagement and participation.
 
 ## 🔐 Identity & Authenticity
 

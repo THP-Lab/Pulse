@@ -1,131 +1,99 @@
-# Pulsy - Application de Référendum Interactif
+# 🚀 Pulse – Interactive Web3 Referendum Application
 
-## 📋 Description
+## 🎯 Project Overview
 
-Pulsy est une application web interactive qui permet aux utilisateurs de répondre à des questions de référendum de manière ludique et intuitive. L'application utilise un système de cartes glissantes (swipe) pour recueillir les votes des utilisateurs.
+**Pulse** is a cutting-edge Web3 platform designed to revolutionize the way communities and organizations interact through voting. It transforms the act of voting into a daily, engaging, and interactive experience. Pulse empowers companies to gather actionable insights from their communities in real time, enabling data-driven, strategic decision-making.
 
-## ✨ Fonctionnalités
+## ✨ Key Features
 
-- **Interface de cartes glissantes** : Répondez aux questions en glissant les cartes vers la gauche (Non) ou la droite (Oui)
-- **Barre de progression** : Suivez votre avancement dans le questionnaire
-- **Support tactile et souris** : Compatible avec les appareils tactiles et les ordinateurs
-- **Interface responsive** : S'adapte à tous les écrans
-- **Design moderne** : Interface utilisateur élégante avec Tailwind CSS et Radix UI
-- **Gestion d'état** : Suivi des votes et de la progression
+### 🎮 Intuitive User Interface
+- **Swipeable cards**: Smooth, mobile-friendly swipe navigation.
+- **Responsive design**: Optimized for all screen sizes and devices.
 
-## 🛠️ Technologies Utilisées
+### 🗳️ Smart Voting Mechanism
+- **Stakeholder Pulse**: Companies can submit tailored questions to their user base.
+- **Open Voting**: Users can participate freely and view aggregated community responses.
+- **Reward System**: Tokens are earned for each vote, encouraging consistent engagement.
 
-- **React 19** - Framework frontend
-- **TypeScript** - Typage statique
-- **Vite** - Outil de build et développement
-- **Tailwind CSS** - Framework CSS utilitaire
-- **Radix UI** - Composants d'interface accessibles
-- **Lucide React** - Icônes modernes
+### 📊 Data Visualization & Insights
+- **Live Results**: Real-time display of community responses.
+- **Daily Topics**: Up to 5 questions per day, either random or topic-specific.
+- **Community Comparison**: See how your vote compares to others.
+- **Advanced Dashboards**: In-depth analytics for enterprise stakeholders.
 
-## 🚀 Installation et Démarrage
+## 🛠️ Technical Architecture
 
-### Prérequis
+### Tech Stack
+- **React 19 + TypeScript**: Scalable and maintainable front-end.
+- **Tailwind CSS**: Clean, modern, and responsive styling.
+- **Radix UI**: Accessible and reliable component library.
+- **Vite**: Fast and optimized development environment.
 
-- Node.js (version 18 ou supérieure)
-- pnpm (recommandé) ou npm
+## 🎨 Design & User Experience
 
-### Installation
+### 💰 Token Economy
+- **User Rewards**: Tokens are distributed for each interaction.
+- **Utility**: Tokens can be used to submit questions to the community.
+- **Gamification**: Engagement is driven by a reward-based system.
 
-1. **Cloner le repository**
-   ```bash
-   git clone git@github.com:THP-Lab/Pulse.git
-   cd Pulse
-   ```
+### 🔐 World ID Authentication
+- **World Coin Integration**: Secure authentication powered by World ID.
+- **Identity Verification**: Ensures the authenticity of every vote.
+- **Reliable Data**: Trustworthy community insights at scale.
 
-2. **Installer les dépendances**
-   ```bash
-   pnpm install
-   # ou
-   npm install
-   ```
+## 📋 Questions & Data Structure
 
-3. **Lancer le serveur de développement**
-   ```bash
-   pnpm dev
-   # ou
-   npm run dev
-   ```
+### 🎯 Question Sources
+- **Enterprise Stakeholders**: Submit targeted questions to their audiences.
+- **Initial Pool**: A curated database of questions across diverse topics to kickstart the platform.
+- **Dynamic Growth**: Community input and insights continuously enrich the platform.
 
-4. **Ouvrir l'application**
-   L'application sera disponible à l'adresse : `http://localhost:5173`
+### 📊 Covered Topics
+- **Bridge Governance Tokens**: Cross-chain governance mechanisms.
+- **DeFi**: Decentralized finance protocols and trends.
+- **DID (Decentralized Identifiers)**: Sovereign digital identity management.
+- **AI Integration**: Impacts and opportunities of artificial intelligence.
 
-### Scripts Disponibles
+## 🔮 Roadmap & Upcoming Features
 
-- `pnpm dev` - Lance le serveur de développement
-- `pnpm build` - Compile l'application pour la production
-- `pnpm preview` - Prévisualise la version de production
-- `pnpm lint` - Vérifie le code avec ESLint
+### 🔐 In Progress
+- **World ID Authentication**: Decentralized identity system currently under development.
 
-## 📁 Structure du Projet
+### 🛠️ Planned Enhancements
+- [ ] Unit Testing
+- [ ] Backend API Integration
+- [ ] Stakeholder Dashboard
+- [ ] User Profile Management
+- [ ] Enhanced Result Visualization
+- [ ] Export Voting Data
+- [ ] Real-time Notifications
+- [ ] "Skip Question" Option
 
-```
-src/
-├── components/          # Composants React
-│   ├── ui/             # Composants d'interface utilisateur
-│   ├── QuestionCard.tsx # Carte de question principale
-│   └── ProgressBar.tsx  # Barre de progression
-├── types/              # Définitions TypeScript
-├── lib/                # Utilitaires et configurations
-├── assets/             # Ressources statiques
-└── App.tsx             # Composant principal
-```
+## 📝 Developer Notes
 
-## 🎮 Utilisation
+- **Production Ready**: The application is fully deployable.
+- **Code Quality**: Adheres to modern React/TypeScript best practices.
+- **Complete Documentation**: Clear and up-to-date developer guides.
+- **Accessibility First**: Designed with inclusivity and usability in mind.
 
-1. **Démarrage** : L'application charge automatiquement les questions depuis `questions.json`
-2. **Navigation** : Utilisez les boutons "YES" et "NO" ou glissez la carte
-3. **Progression** : Suivez votre avancement avec la barre de progression
-4. **Redémarrage** : Cliquez sur "Restart" pour recommencer le questionnaire
+## 🏆 Development Context
 
-## 📊 Format des Données
-
-L'application attend un fichier `questions.json` avec la structure suivante :
-
-```json
-{
-  "questions": [
-    {
-      "id": "1",
-      "question": "Question de référendum ?",
-      "category": "Politique"
-    }
-  ]
-}
-```
-
-## 🎨 Personnalisation
-
-### Styles
-- Les styles sont gérés avec Tailwind CSS
-- Les composants UI utilisent Radix UI pour l'accessibilité
-- Les animations sont personnalisables via CSS
-
-### Composants
-- `QuestionCard` : Carte principale avec interactions de glissement
-- `ProgressBar` : Barre de progression personnalisable
-- Composants UI réutilisables dans `components/ui/`
-
-## 🤝 Contribution
-
-1. Fork le projet
-2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/AmazingFeature`)
-3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
-4. Push vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrez une Pull Request
-
-## 📝 Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
-
-## 👥 Équipe
-
-Développé dans le cadre du projet THP Lab.
+This project was developed during a hackathon in Cannes, showcasing:
+- **Innovation**: A reimagined voting experience.
+- **Modern Technologies**: Built with React, TypeScript, and Tailwind CSS.
+- **Team Collaboration**: Efficient teamwork under time constraints.
+- **Speed & Execution**: Fully functional MVP delivered in record time.
 
 ---
 
-**Pulsy** - Rendez le vote plus interactif et engageant ! 🗳️
+**Pulse** – Make voting interactive, insightful, and community-driven. 🗳️
+
+## 🔗 Useful Links
+
+- [🔗 GitHub Repository](https://github.com/THP-Lab/Pulse)
+- [📚 Documentation](./README.md)
+- [💬 Issues & Discussions](https://github.com/THP-Lab/Pulse/issues)
+
+---
+
+*Crafted with ❤️ during a hackathon in Cannes*

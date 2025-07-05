@@ -1,0 +1,279 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Règles Cursor pour la génération de tâches - Projet Pulsy
+
+## Contexte du projet
+Pulsy est une application web interactive de type Tinder où les utilisateurs répondent à des questions de type référendum (pour/contre) en utilisant un système de cartes glissantes. L'application utilise un système de swipe pour recueillir les votes des utilisateurs.
+
+## Stack technique actuelle
+- **Frontend**: React 19 + TypeScript + Vite
+- **Styling**: Tailwind CSS 4.1 + Radix UI
+- **État**: React hooks (useState, useEffect)
+- **Composants**: Radix UI + Lucide React
+- **Build**: Vite avec TypeScript strict
+- **Linting**: ESLint avec règles TypeScript
+
+## Règles de génération de tâches
+
+### 1. Structure des tâches
+Chaque tâche doit inclure :
+- **Titre** : Action claire et concise
+- **Description** : Contexte et objectifs
+- **Critères d'acceptation** : Liste numérotée des fonctionnalités attendues
+- **Estimation** : Temps en heures (1-8h)
+- **Priorité** : High/Medium/Low
+- **Tags** : [UI], [API], [State], [Test], [Bug], [Feature]
+
+### 2. Catégories de tâches
+
+#### 🎨 Interface utilisateur (UI)
+- Composants réutilisables (boutons, cartes, modales)
+- Animations de swipe (like/dislike)
+- Design responsive mobile-first avec Tailwind
+- Thème et palette de couleurs cohérents
+- Indicateurs visuels de progression
+
+#### 🔄 Logique métier (Business Logic)
+- Gestion des questions et votes
+- Système de progression
+- Algorithme de navigation
+- Gestion des réponses utilisateur
+- Statistiques et analytics
+
+#### 📊 Gestion d'état (State Management)
+- État global de l'application
+- Cache des questions et réponses
+- Synchronisation avec le backend (futur)
+- Gestion des sessions utilisateur
+- Persistance locale
+
+#### 🔌 API et données (API & Data)
+- Endpoints REST/GraphQL (futur)
+- Modèles de données TypeScript
+- Validation des données
+- Gestion des erreurs
+- Optimisation des requêtes
+
+#### 🎨 Tests et qualité (Testing & Quality)
+- Tests unitaires des composants
+- Tests d'intégration des flux
+- Tests E2E des parcours utilisateur
+- Validation des performances
+- Accessibilité (WCAG)
+
+### 3. Conventions de nommage
+
+#### Composants React
+```typescript
+// Composants de présentation
+QuestionCard.tsx
+ProgressBar.tsx
+VoteButtons.tsx
+
+// Composants de conteneur
+QuestionContainer.tsx
+VoteContainer.tsx
+
+// Pages
+HomePage.tsx
+ResultsPage.tsx
+```
+
+#### Types TypeScript
+```typescript
+// Interfaces principales
+interface Question {
+  id: string;
+  question: string;
+  category: string;
+}
+
+interface UserVote {
+  questionId: string;
+  vote: 'like' | 'dislike' | 'idk';
+  timestamp: Date;
+}
+
+interface AppData {
+  questions: Question[];
+}
+```
+
+#### Styles Tailwind
+```css
+/* Classes Tailwind avec BEM-like naming */
+.question-card {}
+.question-card__header {}
+.question-card__content {}
+.question-card--active {}
+
+.vote-buttons {}
+.vote-buttons__like {}
+.vote-buttons__dislike {}
+```
+
+### 4. Patterns d'architecture
+
+#### Structure des dossiers actuelle
+```
+src/
+├── components/
+│   ├── ui/           # Composants Radix UI
+│   ├── QuestionCard.tsx # Carte principale
+│   └── ProgressBar.tsx  # Barre de progression
+├── types/            # Types TypeScript
+├── lib/              # Utilitaires
+├── assets/           # Ressources statiques
+└── App.tsx           # Composant principal
+```
+
+#### Hooks personnalisés à créer
+```typescript
+// Exemples de hooks à développer
+useQuestions()
+useVoting(questionId: string)
+useProgress(currentIndex: number, total: number)
+useSwipeGestures()
+useLocalStorage(key: string)
+```
+
+### 5. Critères de qualité
+
+#### Performance
+- Lazy loading des composants
+- Optimisation des animations
+- Debouncing des interactions
+- Cache intelligent des données
+
+#### Accessibilité
+- Navigation au clavier
+- Support des lecteurs d'écran
+- Contraste des couleurs
+- Textes alternatifs
+
+#### UX/UI
+- Feedback visuel immédiat
+- États de chargement
+- Gestion des erreurs
+- Animations fluides
+
+### 6. Exemples de tâches
+
+#### Tâche UI - Amélioration QuestionCard
+**Titre**: Améliorer l'animation de swipe du QuestionCard
+**Description**: Optimiser les animations de swipe pour une expérience plus fluide
+**Critères d'acceptation**:
+1. Animation de swipe plus fluide avec easing
+2. Feedback visuel pendant le swipe
+3. Support des gestes tactiles amélioré
+4. Performance optimisée sur mobile
+5. Tests unitaires pour les animations
+**Estimation**: 3h
+**Priorité**: Medium
+**Tags**: [UI], [Test]
+
+#### Tâche API - Service de questions
+**Titre**: Créer un service pour gérer les questions
+**Description**: Extraire la logique de gestion des questions dans un service réutilisable
+**Critères d'acceptation**:
+1. Service pour charger les questions depuis JSON
+2. Gestion des erreurs et retry
+3. Cache des données avec TTL
+4. Types TypeScript pour les réponses
+5. Tests d'intégration
+**Estimation**: 2h
+**Priorité**: High
+**Tags**: [API], [Test]
+
+#### Tâche State - Hook personnalisé pour les votes
+**Titre**: Créer un hook useVoting pour gérer les votes
+**Description**: Extraire la logique de vote dans un hook réutilisable
+**Critères d'acceptation**:
+1. Hook useVoting avec gestion des votes
+2. Persistance locale des votes
+3. Validation des données
+4. Gestion des erreurs
+5. Tests unitaires du hook
+**Estimation**: 2h
+**Priorité**: High
+**Tags**: [State], [Test]
+
+### 7. Workflow de développement
+
+#### Branches Git
+- `main` : Code de production
+- `develop` : Branche de développement
+- `feature/task-name` : Nouvelles fonctionnalités
+- `bugfix/issue-description` : Corrections de bugs
+
+#### Commits
+```
+feat: améliorer l'animation de swipe du QuestionCard
+fix: corriger la gestion des votes sur mobile
+refactor: extraire la logique de vote dans un hook
+test: ajouter les tests pour useVoting hook
+docs: mettre à jour la documentation des composants
+```
+
+#### Code Review
+- Vérification des types TypeScript
+- Tests unitaires présents
+- Respect des conventions de nommage
+- Performance et accessibilité
+- Documentation des composants complexes
+
+### 8. Évolutions futures
+
+#### Fonctionnalités à développer
+- **Catégories** : Organisation des questions par thème
+- **Backend API** : Remplacement du JSON statique
+- **Authentification** : Système de connexion
+- **Statistiques** : Résultats et analytics
+- **Admin Panel** : Gestion des questions
+
+#### Améliorations techniques
+- **State Management** : Zustand ou Redux Toolkit
+- **Tests** : Vitest + React Testing Library
+- **CI/CD** : GitHub Actions
+- **Deployment** : Vercel/Netlify
+
+### 9. Tâches prioritaires
+
+#### Tâches High Priority
+1. **Tests unitaires** : Ajouter Vitest et tests pour les composants
+2. **Hook useVoting** : Extraire la logique de vote
+3. **Service de questions** : Créer un service réutilisable
+4. **Gestion d'erreurs** : Améliorer la gestion des erreurs
+5. **Accessibilité** : Améliorer l'accessibilité des composants
+
+#### Tâches Medium Priority
+1. **Animations** : Optimiser les animations de swipe
+2. **Performance** : Optimiser le rendu des composants
+3. **Responsive** : Améliorer l'adaptation mobile
+4. **Documentation** : Documenter les composants
+5. **CI/CD** : Mettre en place GitHub Actions
+
+#### Tâches Low Priority
+1. **Thème** : Système de thème sombre/clair
+2. **Internationalisation** : Support multi-langues
+3. **Analytics** : Intégration d'analytics
+4. **PWA** : Transformer en Progressive Web App
+5. **Offline** : Support hors ligne
+
+### 10. Métriques de qualité
+
+#### Métriques techniques
+- Couverture de tests > 80%
+- Performance Lighthouse > 90
+- Accessibilité WCAG 2.1 AA
+- Bundle size < 500KB
+
+#### Métriques produit
+- Temps de chargement < 2s
+- Taux d'erreur < 1%
+- Taux de completion > 90%
+- Satisfaction utilisateur > 4.5/5
+

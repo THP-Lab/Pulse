@@ -36,7 +36,7 @@ function App() {
     setSelectedQuestions(selected);
   };
 
-  const handleVote = (vote: 'like' | 'dislike'| "idk") => {
+  const handleVote = (vote: 'like' | 'dislike') => {
     if (!data) return;
 
     const currentQuestion = getCurrentQuestion();
@@ -87,12 +87,10 @@ function App() {
     const totalVotes = userVotes.length;
     const likeCount = userVotes.filter(v => v.vote === 'like').length;
     const dislikeCount = userVotes.filter(v => v.vote === 'dislike').length;
-    const idkCount = userVotes.filter(v => v.vote === 'idk').length;
 
     return {
       like: totalVotes > 0 ? Math.round((likeCount / totalVotes) * 100) : 0,
-      dislike: totalVotes > 0 ? Math.round((dislikeCount / totalVotes) * 100) : 0,
-      idk: totalVotes > 0 ? Math.round((idkCount / totalVotes) * 100) : 0
+      dislike: totalVotes > 0 ? Math.round((dislikeCount / totalVotes) * 100) : 0
     };
   };
 

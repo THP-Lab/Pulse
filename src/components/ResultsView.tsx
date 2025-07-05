@@ -5,7 +5,6 @@ import type { Question, UserVote } from "../types/index";
 interface VoteStats {
   like: number;
   dislike: number;
-  idk: number;
 }
 
 interface ResultsViewProps {
@@ -29,50 +28,102 @@ const ResultsView: React.FC<ResultsViewProps> = ({
           <p className="text-lg text-gray-600">Your Results</p>
         </header>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Vote Summary */}
           <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Overall Results</h2>
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">{voteStats.like}%</div>
-                <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Yes</div>
+            <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Global Results</h2>
+                          <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-green-600 mb-2">{voteStats.like}%</div>
+                  <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">Yes</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-red-600 mb-2">{voteStats.dislike}%</div>
+                  <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">No</div>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-red-600 mb-2">{voteStats.dislike}%</div>
-                <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">No</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-gray-600 mb-2">{voteStats.idk}%</div>
-                <div className="text-sm font-medium text-gray-600 uppercase tracking-wide">IDK</div>
-              </div>
-            </div>
           </div>
 
           {/* Question Review */}
           <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-6">Your Answers</h3>
-            <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-gray-800 mb-6">Your Pulse vs Community Pulse</h3>
+            <div className="space-y-6">
               {selectedQuestions.map((question, index) => {
                 const vote = getVoteForQuestion(question.id);
-                const voteLabel = vote?.vote === "like" ? "Yes" : vote?.vote === "dislike" ? "No" : "IDK";
+                const voteLabel = vote?.vote === "like" ? "Yes" : "No";
                 const voteColor =
                   vote?.vote === "like"
                     ? "bg-green-100 text-green-800"
-                    : vote?.vote === "dislike"
-                      ? "bg-red-100 text-red-800"
-                      : "bg-gray-100 text-gray-800";
+                    : "bg-red-100 text-red-800";
+
+                const communityStats = question.communityStats;
+                const isUserAgreeingWithCommunity = communityStats && vote && 
+                  ((vote.vote === 'like' && communityStats.like > 50) ||
+                   (vote.vote === 'dislike' && communityStats.dislike > 50));
 
                 return (
-                  <div key={question.id} className="border border-gray-200 rounded-lg p-4">
-                    <div className="flex justify-between items-start gap-4">
-                      <div className="flex-1">
-                        <div className="text-sm font-medium text-gray-500 mb-1">Question {index + 1}</div>
-                        <p className="text-gray-800">{question.question}</p>
+                  <div key={question.id} className="border border-gray-200 rounded-lg p-6">
+                    <div className="mb-4">
+                      <div className="text-sm font-medium text-gray-500 mb-2">Question {index + 1}</div>
+                      <p className="text-gray-800 text-lg">{question.question}</p>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {/* User's Answer */}
+                      <div className="bg-gray-50 rounded-lg p-4">
+                        <h4 className="font-semibold text-gray-700 mb-3">Votre réponse</h4>
+                        <div className="flex items-center justify-between">
+                          <span className={`px-4 py-2 rounded-full text-sm font-medium ${voteColor}`}>
+                            {voteLabel}
+                          </span>
+                          {communityStats && (
+                            <div className="text-sm text-gray-500">
+                              {isUserAgreeingWithCommunity ? (
+                                <span className="text-green-600">✓ Pulsing with the Community</span>
+                              ) : (
+                                <span className="text-orange-600">⚠ You're not pulsing with the community</span>
+                              )}
+                            </div>
+                          )}
+                        </div>
                       </div>
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${voteColor}`}>
-                        {voteLabel}
-                      </span>
+
+                      {/* Community Stats */}
+                      {communityStats && (
+                        <div className="bg-blue-50 rounded-lg p-4">
+                          <h4 className="font-semibold text-gray-700 mb-3">Community Pulse</h4>
+                          <div className="space-y-2">
+                            <div className="flex justify-between items-center">
+                              <span className="text-sm text-gray-600">Yes</span>
+                              <div className="flex items-center gap-2">
+                                <div className="w-24 bg-gray-200 rounded-full h-2">
+                                  <div 
+                                    className="bg-green-500 h-2 rounded-full" 
+                                    style={{ width: `${communityStats.like}%` }}
+                                  ></div>
+                                </div>
+                                <span className="text-sm font-medium text-gray-700 w-8">{communityStats.like}%</span>
+                              </div>
+                            </div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-sm text-gray-600">No</span>
+                              <div className="flex items-center gap-2">
+                                <div className="w-24 bg-gray-200 rounded-full h-2">
+                                  <div 
+                                    className="bg-red-500 h-2 rounded-full" 
+                                    style={{ width: `${communityStats.dislike}%` }}
+                                  ></div>
+                                </div>
+                                <span className="text-sm font-medium text-gray-700 w-8">{communityStats.dislike}%</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <div className="text-xs text-gray-500 mt-2">
+                            Total: {communityStats.totalVotes.toLocaleString()} Pulse
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 );
@@ -82,8 +133,9 @@ const ResultsView: React.FC<ResultsViewProps> = ({
 
           {/* Restart Button */}
           <div className="text-center">
-            <Button onClick={onRestart} size="lg" className="px-8 py-3 text-lg">
-              Start New Quiz
+            <Button onClick={onRestart} size="lg" 
+            className="px-8 py-3 text-lg w-full max-w-md">
+              Start a New Pulse Journey
             </Button>
           </div>
         </div>

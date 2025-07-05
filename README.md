@@ -2,91 +2,127 @@
 
 ## 🎯 Project Overview
 
-**Pulse** is a cutting-edge Web3 platform designed to revolutionize the way communities and organizations interact through voting. It transforms the act of voting into a daily, engaging, and interactive experience. Pulse empowers companies to gather actionable insights from their communities in real time, enabling data-driven, strategic decision-making.
+**Pulse** is a next-generation Web3 application designed to transform how communities and organizations interact through voting. Built to be engaging, accessible, and secure, Pulse enables companies to capture real-time sentiment from their users — turning passive audiences into active participants.
+
+The app is fully integrated with the **Worldcoin MiniApp Marketplace** via the **Worldcoin Minikit**, and leverages the **Intuition.system protocol** to contribute to the building of decentralized online reputation. Pulse doesn't just capture opinions — it anchors them to a verifiable, trust-based system.
+
+## 🔗 Key Integrations & Reputation Framework
+
+### 🌍 Worldcoin Minikit Integration
+Pulse has been built using the **Worldcoin Minikit**, making it fully compatible with the **Worldcoin MiniApp Marketplace**. This ensures a seamless user experience for verified World ID holders, enabling:
+- **Frictionless onboarding** with secure identity verification.
+- **Authentic voting** from real, unique individuals.
+- **Direct integration into the World App ecosystem.**
+
+### 🧠 Intuition Protocol – Reputation Through Collective Knowledge
+
+Pulse contributes to a **decentralized knowledge graph** powered by [Intuition.system](https://intuition.system), where each interaction becomes part of a shared reputation layer for the internet.
+
+#### 🧩 Core Concepts:
+- **Atom**: A core identity (person, organization, or concept).
+- **Signal**: A meaningful statement or opinion about an atom.
+- **Triplet**: A structured data entry in the format:  
+  **Subject (Atom)** + **Predicate (Claim)** + **Object (Qualifier)**
+
+🗳️ **Each vote in Pulse becomes a triplet**, enriching the reputation and context of entities across Web3.
+
+> Example:
+> - *Company A* (Atom)  
+> - *is trusted by* (Predicate)  
+> - *70% of its community* (Object)
+
+Through this system, **Pulse goes beyond polling** — it builds a **transparent, verifiable reputation layer** for users, projects, and organizations alike.
 
 ## ✨ Key Features
 
-### 🎮 Intuitive User Interface
-- **Swipeable cards**: Smooth, mobile-friendly swipe navigation.
-- **Responsive design**: Optimized for all screen sizes and devices.
+### 🎮 User-Friendly Interface
+- **Swipeable Cards**: Interactive, mobile-first voting experience.
+- **Responsive Design**: Optimized for any screen or device.
 
-### 🗳️ Smart Voting Mechanism
-- **Stakeholder Pulse**: Companies can submit tailored questions to their user base.
-- **Open Voting**: Users can participate freely and view aggregated community responses.
-- **Reward System**: Tokens are earned for each vote, encouraging consistent engagement.
+### 🗳️ Smart Voting System
+- **Stakeholder Voting**: Organizations can submit targeted questions to their audiences.
+- **Open & Transparent Voting**: Users can vote freely and compare answers in real time.
+- **Token Rewards**: Incentives for participation using tokenized rewards.
 
-### 📊 Data Visualization & Insights
-- **Live Results**: Real-time display of community responses.
-- **Daily Topics**: Up to 5 questions per day, either random or topic-specific.
-- **Community Comparison**: See how your vote compares to others.
-- **Advanced Dashboards**: In-depth analytics for enterprise stakeholders.
+### 📊 Real-Time Analytics
+- **Live Results**: Instantly updated community insights.
+- **Daily Questions**: 5 new questions per day, thematically or randomly selected.
+- **Comparative Metrics**: Benchmark your opinion against the broader community.
+- **Stakeholder Dashboards**: Data-rich panels for enterprise-level decision-making.
 
-## 🛠️ Technical Architecture
+## 🛠️ Technical Stack
 
-### Tech Stack
-- **React 19 + TypeScript**: Scalable and maintainable front-end.
-- **Tailwind CSS**: Clean, modern, and responsive styling.
-- **Radix UI**: Accessible and reliable component library.
-- **Vite**: Fast and optimized development environment.
+- **React 19 + TypeScript**: Clean, scalable codebase.
+- **Tailwind CSS**: Utility-first, responsive design.
+- **Radix UI**: Fully accessible, headless UI components.
+- **Vite**: Lightning-fast build and dev server.
+- **Worldcoin Minikit**: Seamless MiniApp integration.
+- **Intuition SDK**: Real-time triplet generation and publication.
 
-## 🎨 Design & User Experience
+## 💰 Token Ecosystem
 
-### 💰 Token Economy
-- **User Rewards**: Tokens are distributed for each interaction.
-- **Utility**: Tokens can be used to submit questions to the community.
-- **Gamification**: Engagement is driven by a reward-based system.
+- **Earn While Participating**: Tokens distributed for each vote.
+- **Circular Economy**: Tokens can be used to submit community questions.
+- **Gamification**: Incentives encourage daily engagement and participation.
 
-### 🔐 World ID Authentication
-- **World Coin Integration**: Secure authentication powered by World ID.
-- **Identity Verification**: Ensures the authenticity of every vote.
-- **Reliable Data**: Trustworthy community insights at scale.
+## 🔐 Identity & Authenticity
 
-## 📋 Questions & Data Structure
+- **World ID Integration**: Identity verification via the Worldcoin protocol ensures trust.
+- **Sybil Resistance**: Every vote comes from a verified, unique individual.
+- **Data Reliability**: Decisions are based on authenticated community feedback.
 
-### 🎯 Question Sources
-- **Enterprise Stakeholders**: Submit targeted questions to their audiences.
-- **Initial Pool**: A curated database of questions across diverse topics to kickstart the platform.
-- **Dynamic Growth**: Community input and insights continuously enrich the platform.
+## 🧠 Reputation & Data Value
 
-### 📊 Covered Topics
-- **Bridge Governance Tokens**: Cross-chain governance mechanisms.
-- **DeFi**: Decentralized finance protocols and trends.
-- **DID (Decentralized Identifiers)**: Sovereign digital identity management.
-- **AI Integration**: Impacts and opportunities of artificial intelligence.
+Pulse isn't just a voting tool — it's a **reputation engine**. Every interaction contributes to a shared, decentralized truth that can:
+- Enhance **user credibility** over time.
+- Build **organization trust scores**.
+- Serve as **verifiable public sentiment**.
 
-## 🔮 Roadmap & Upcoming Features
+Organizations can now **understand their community in real-time**, while contributing to a larger ecosystem of trust on the decentralized web.
 
-### 🔐 In Progress
-- **World ID Authentication**: Decentralized identity system currently under development.
+## 📋 Topics & Data
 
-### 🛠️ Planned Enhancements
-- [ ] Unit Testing
-- [ ] Backend API Integration
-- [ ] Stakeholder Dashboard
-- [ ] User Profile Management
-- [ ] Enhanced Result Visualization
-- [ ] Export Voting Data
-- [ ] Real-time Notifications
-- [ ] "Skip Question" Option
+### Topics Covered
+- **Blockchain Governance (Bridge Tokens)**
+- **DeFi Trends**
+- **Decentralized Identity (DID)**
+- **AI & Web3 Integration**
+
+### Data Sources
+- **Stakeholder Questions**: Custom surveys by verified organizations.
+- **Seed Pool**: Curated initial database of impactful and relevant questions.
+- **Evolving Graph**: Community responses dynamically shape future questions and analytics.
+
+## 🔮 Roadmap & Future Features
+
+### In Progress
+- [ ] Decentralized Authentication via World ID (deep integration)
+- [ ] Backend API connection
+- [ ] Stakeholder dashboard
+- [ ] Enhanced result visualizations
+- [ ] Exportable data sets
+- [ ] Real-time notifications
+- [ ] User profile customization
+- [ ] "Skip Question" functionality
 
 ## 📝 Developer Notes
 
-- **Production Ready**: The application is fully deployable.
-- **Code Quality**: Adheres to modern React/TypeScript best practices.
-- **Complete Documentation**: Clear and up-to-date developer guides.
-- **Accessibility First**: Designed with inclusivity and usability in mind.
+- **Production Ready**: Stable MVP available for deployment.
+- **Code Quality**: Follows modern React & TypeScript best practices.
+- **Complete Documentation**: Fully maintained and developer-friendly.
+- **Inclusive Design**: Accessible UX for all user profiles.
 
-## 🏆 Development Context
+## 🏆 Built During a Hackathon
 
-This project was developed during a hackathon in Cannes, showcasing:
-- **Innovation**: A reimagined voting experience.
-- **Modern Technologies**: Built with React, TypeScript, and Tailwind CSS.
-- **Team Collaboration**: Efficient teamwork under time constraints.
-- **Speed & Execution**: Fully functional MVP delivered in record time.
+Developed in Cannes during a high-intensity hackathon, Pulse demonstrates:
+- **Rapid innovation** using cutting-edge tech.
+- **Efficient team collaboration** under time constraints.
+- **Functional delivery** in record time.
+- **A real use case for decentralized reputation building.**
 
 ---
 
-**Pulse** – Make voting interactive, insightful, and community-driven. 🗳️
+**Pulse** – More than just voting. A new standard for interactive reputation and collective intelligence. 🗳️
 
 ## 🔗 Useful Links
 
@@ -96,4 +132,4 @@ This project was developed during a hackathon in Cannes, showcasing:
 
 ---
 
-*Crafted with ❤️ during a hackathon in Cannes*
+*Crafted with ❤️ during a hackathon in Cannes – Built for the future of community intelligence.*

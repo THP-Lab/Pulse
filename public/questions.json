@@ -1,0 +1,294 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "category": "Bridge Governance Tokens",
+      "question": "Are you in favor of integrating AI systems to automate and secure governance decisions for cross-chain bridges?"
+    },
+    {
+      "id": "2",
+      "category": "Bridge Governance Tokens",
+      "question": "Are you in favor of using DIDs to enhance transparency and accountability in bridge token governance?"
+    },
+    {
+      "id": "3",
+      "category": "Bridge Governance Tokens",
+      "question": "Are you in favor of integrating self-sovereign identity (DID) based authentication mechanisms in bridge governance?"
+    },
+    {
+      "id": "4",
+      "category": "Bridge Governance Tokens",
+      "question": "Are you in favor of using AI to detect and prevent fraud in bridge token governance processes?"
+    },
+    {
+      "id": "5",
+      "category": "Bridge Governance Tokens",
+      "question": "Are you in favor of decentralized bridge governance assisted by AI-powered oracles?"
+    },
+    {
+      "id": "6",
+      "category": "Bridge Governance Tokens",
+      "question": "Are you in favor of governance token holders voting through DID-based systems to guarantee voter identity?"
+    },
+    {
+      "id": "7",
+      "category": "Bridge Governance Tokens",
+      "question": "Are you in favor of implementing AI-driven automated arbitration mechanisms for governance disputes related to bridges?"
+    },
+    {
+      "id": "8",
+      "category": "Bridge Governance Tokens",
+      "question": "Are you in favor of bridge governance protocols integrating AI predictive analytics to anticipate security risks?"
+    },
+    {
+      "id": "9",
+      "category": "Bridge Governance Tokens",
+      "question": "Are you in favor of issuing bridge governance tokens only to entities verified via DID?"
+    },
+    {
+      "id": "10",
+      "category": "Bridge Governance Tokens",
+      "question": "Are you in favor of creating a regulatory framework incorporating AI and DID to govern cross-chain bridge governance?"
+    },
+    {
+      "id": "11",
+      "category": "Decentralized Finance (DeFi)",
+      "question": "Are you in favor of prioritizing UX improvements to drive mainstream DeFi adoption?"
+    },
+    {
+      "id": "12",
+      "category": "Decentralized Finance (DeFi)",
+      "question": "Are you in favor of cross-chain solutions to resolve liquidity fragmentation in DeFi?"
+    },
+    {
+      "id": "13",
+      "category": "Decentralized Finance (DeFi)",
+      "question": "Are you in favor of large-scale integration of real-world assets (RWA) into DeFi protocols?"
+    },
+    {
+      "id": "14",
+      "category": "Decentralized Identifier (DID)",
+      "question": "Are you in favor of prioritizing data privacy in DID systems?"
+    },
+    {
+      "id": "15",
+      "category": "Decentralized Identifier (DID)",
+      "question": "Are you in favor of DID onboarding processes that are entirely independent of Web2 services?"
+    },
+    {
+      "id": "16",
+      "category": "Decentralized Identifier (DID)",
+      "question": "Are you in favor of using biometric identity models (e.g., Worldcoin) in DID systems?"
+    },
+    {
+      "id": "17",
+      "category": "Decentralized Identifier (DID)",
+      "question": "Are you in favor of integrating DIDs into compliant KYC/AML frameworks?"
+    },
+    {
+      "id": "18",
+      "category": "Decentralized Identifier (DID)",
+      "question": "Are you in favor of on-chain mechanisms to recover lost identities in self-sovereign systems?"
+    },
+    {
+      "id": "19",
+      "category": "Oracle",
+      "question": "Are you in favor of integrating AI into oracles to improve the quality and reliability of data provided?"
+    },
+    {
+      "id": "20",
+      "category": "Oracle",
+      "question": "Are you in favor of oracles using AI-assisted decentralized governance mechanisms to validate data?"
+    },
+    {
+      "id": "21",
+      "category": "Oracle",
+      "question": "Are you in favor of using AI-powered oracles to automatically detect erroneous or fraudulent data?"
+    },
+    {
+      "id": "22",
+      "category": "Oracle",
+      "question": "Are you in favor of adopting open standards for interoperability of AI-powered oracles across blockchains?"
+    },
+    {
+      "id": "23",
+      "category": "Oracle",
+      "question": "Are you in favor of oracles providing AI-based predictive analytics services to smart contracts?"
+    },
+    {
+      "id": "24",
+      "category": "Oracle",
+      "question": "Are you in favor of oracle governance including AI models to arbitrate disputes over data quality?"
+    },
+    {
+      "id": "25",
+      "category": "Oracle",
+      "question": "Are you in favor of oracles being capable of learning and improving their performance through machine learning techniques?"
+    },
+    {
+      "id": "26",
+      "category": "Oracle",
+      "question": "Are you in favor of tokenizing oracle governance rights with AI-based incentive mechanisms?"
+    },
+    {
+      "id": "27",
+      "category": "Oracle",
+      "question": "Are you in favor of oracles collaborating with decentralized AI networks to enhance data robustness?"
+    },
+    {
+      "id": "28",
+      "category": "Oracle",
+      "question": "Are you in favor of developing oracles capable of performing complex on-chain computations via integrated AI?"
+    },
+    {
+      "id": "29",
+      "category": "Data Availability (DA)",
+      "question": "Are you in favor of using knowledge graphs to improve blockchain data access and structuring?"
+    },
+    {
+      "id": "30",
+      "category": "Data Availability (DA)",
+      "question": "Are you in favor of integrating AI in Data Availability protocols to optimize data verification and analysis?"
+    },
+    {
+      "id": "31",
+      "category": "Data Availability (DA)",
+      "question": "Are you in favor of using knowledge graphs as an intermediary layer for querying modular blockchains?"
+    },
+    {
+      "id": "32",
+      "category": "Data Availability (DA)",
+      "question": "Are you in favor of developing open standards for interoperability of blockchain-related knowledge graphs?"
+    },
+    {
+      "id": "33",
+      "category": "Data Availability (DA)",
+      "question": "Are you in favor of AI-driven automation for updates and maintenance of knowledge graphs in DA systems?"
+    },
+    {
+      "id": "34",
+      "category": "Data Availability (DA)",
+      "question": "Are you in favor of DA protocols including AI tools to automatically detect and correct errors in published data?"
+    },
+    {
+      "id": "35",
+      "category": "Data Availability (DA)",
+      "question": "Are you in favor of DA platforms leveraging AI to provide predictive analytics based on historical blockchain data?"
+    },
+    {
+      "id": "36",
+      "category": "Data Availability (DA)",
+      "question": "Are you in favor of AI-powered knowledge graphs becoming a key layer in modular blockchain infrastructures?"
+    },
+    {
+      "id": "37",
+      "category": "Data Availability (DA)",
+      "question": "Are you in favor of AI tools querying knowledge graphs being open source for the blockchain community?"
+    },
+    {
+      "id": "38",
+      "category": "Data Availability (DA)",
+      "question": "Are you in favor of integrating token-based monetization for knowledge graph and AI services within DA protocols?"
+    },
+    {
+      "id": "39",
+      "category": "Smart Contract Platform",
+      "question": "Are you in favor of integrating AI models into smart contracts to make them more autonomous and context-aware?"
+    },
+    {
+      "id": "40",
+      "category": "Smart Contract Platform",
+      "question": "Are you in favor of developing a smart contract language purpose-built for AI interaction?"
+    },
+    {
+      "id": "41",
+      "category": "Smart Contract Platform",
+      "question": "Are you in favor of predictive logic in smart contracts via AI to anticipate on/off-chain events?"
+    },
+    {
+      "id": "42",
+      "category": "Smart Contract Platform",
+      "question": "Are you in favor of on-chain AI agents capable of dynamically adjusting contract logic under defined conditions?"
+    },
+    {
+      "id": "43",
+      "category": "Smart Contract Platform",
+      "question": "Are you in favor of smart contracts that can self-evaluate and self-correct using embedded AI systems?"
+    },
+    {
+      "id": "44",
+      "category": "Smart Contract Platform",
+      "question": "Are you in favor of AI-assisted governance embedded in smart contracts for arbitrating sensitive decisions?"
+    },
+    {
+      "id": "45",
+      "category": "Smart Contract Platform",
+      "question": "Are you in favor of L1/L2 platforms natively supporting runtimes for AI agent execution?"
+    },
+    {
+      "id": "46",
+      "category": "Smart Contract Platform",
+      "question": "Are you in favor of using on-chain AI models for real-time auditing of smart contract security?"
+    },
+    {
+      "id": "47",
+      "category": "Smart Contract Platform",
+      "question": "Are you in favor of cross-chain standardization for AI-compatible smart contracts?"
+    },
+    {
+      "id": "48",
+      "category": "Smart Contract Platform",
+      "question": "Are you in favor of native AI copilots in future smart contract development environments?"
+    },
+    {
+      "id": "49",
+      "category": "Artificial Intelligence (AI)",
+      "question": "Are you in favor of fully decentralized training of AI models?"
+    },
+    {
+      "id": "50",
+      "category": "Artificial Intelligence (AI)",
+      "question": "Are you in favor of adopting dedicated governance models for decentralized AI networks?"
+    },
+    {
+      "id": "51",
+      "category": "Artificial Intelligence (AI)",
+      "question": "Are you in favor of using AI-powered DAOs to solve complex coordination problems?"
+    },
+    {
+      "id": "52",
+      "category": "Artificial Intelligence (AI)",
+      "question": "Are you in favor of implementing safeguards to protect users from biased or harmful AI?"
+    },
+    {
+      "id": "53",
+      "category": "Artificial Intelligence (AI)",
+      "question": "Are you in favor of tokenizing ownership of AI models?"
+    },
+    {
+      "id": "54",
+      "category": "Artificial Intelligence (AI)",
+      "question": "Are you in favor of developing real-world use cases combining blockchain and AI?"
+    },
+    {
+      "id": "55",
+      "category": "Ethereum Ecosystem",
+      "question": "Are you in favor of the idea that current L2 rollup adoption makes Ethereum truly scalable?"
+    },
+    {
+      "id": "56",
+      "category": "Gaming (GameFi)",
+      "question": "Are you in favor of adopting a business model in Web3 gaming that prioritizes long-term sustainability over short-term gains?"
+    },
+    {
+      "id": "57",
+      "category": "Gaming (GameFi)",
+      "question": "Are you in favor of limiting in-game tokens to utility-only functions, excluding speculation?"
+    },
+    {
+      "id": "58",
+      "category": "Gaming (GameFi)",
+      "question": "Are you in favor of designing GameFi systems that prioritize gameplay quality over financial incentives?"
+    }
+  ]
+}

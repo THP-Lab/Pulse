@@ -1,0 +1,263 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Règles Cursor pour la création de PRD - Projet Tinder-like Référendum
+
+## Contexte du projet
+Application de type Tinder pour répondre à des questions de référendum avec interface like/dislike, organisée par catégories thématiques.
+
+## Structure du PRD (Product Requirements Document)
+
+### 1. En-tête du document
+```markdown
+# PRD - [Nom de la fonctionnalité]
+**Version**: 1.0
+**Date**: [Date]
+**Auteur**: [Nom]
+**Statut**: Draft/Review/Approved
+**Priorité**: High/Medium/Low
+```
+
+### 2. Résumé exécutif
+- **Objectif** : Description claire de la fonctionnalité
+- **Valeur utilisateur** : Bénéfice principal pour l'utilisateur
+- **Métriques de succès** : KPIs à mesurer
+- **Timeline** : Estimation de développement
+
+### 3. Contexte et problème
+- **Problème actuel** : Ce qui ne fonctionne pas aujourd'hui
+- **Impact** : Conséquences du problème
+- **Opportunité** : Pourquoi résoudre maintenant
+- **Personas** : Utilisateurs cibles
+
+### 4. Solution proposée
+- **Vue d'ensemble** : Description de la solution
+- **Fonctionnalités clés** : Liste des features principales
+- **Flux utilisateur** : Parcours utilisateur détaillé
+- **Intégrations** : APIs et services externes
+
+### 5. Spécifications techniques
+
+#### Architecture
+```typescript
+// Exemples de structures de données
+interface Question {
+  id: string;
+  text: string;
+  category: Category;
+  difficulty: 'easy' | 'medium' | 'hard';
+  tags: string[];
+  createdAt: Date;
+}
+
+interface UserVote {
+  userId: string;
+  questionId: string;
+  vote: 'like' | 'dislike';
+  timestamp: Date;
+  category: string;
+}
+
+interface Category {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  color: string;
+  questionCount: number;
+}
+```
+
+#### Composants React
+```typescript
+// Structure des composants principaux
+<App>
+  <Router>
+    <Layout>
+      <CategorySelector />
+      <QuestionSwiper>
+        <QuestionCard />
+        <VoteButtons />
+      </QuestionSwiper>
+      <ProgressIndicator />
+    </Layout>
+  </Router>
+</App>
+```
+
+### 6. Spécifications fonctionnelles
+
+#### Fonctionnalités principales
+1. **Sélection de catégorie**
+   - Liste des catégories disponibles
+   - Prévisualisation du nombre de questions
+   - Navigation intuitive
+
+2. **Interface de vote**
+   - Carte de question avec texte clair
+   - Boutons like/dislike avec feedback visuel
+   - Animation de swipe
+   - Progression visible
+
+3. **Gestion des réponses**
+   - Sauvegarde locale des votes
+   - Synchronisation avec le backend
+   - Historique des réponses
+
+4. **Statistiques personnelles**
+   - Résumé par catégorie
+   - Tendances de vote
+   - Comparaison avec la moyenne
+
+#### Règles métier
+- Un utilisateur ne peut voter qu'une fois par question
+- Les questions sont présentées aléatoirement dans une catégorie
+- Progression sauvegardée automatiquement
+- Possibilité de changer son vote (avec limite de temps)
+
+### 7. Spécifications UI/UX
+
+#### Design System
+```css
+/* Palette de couleurs */
+:root {
+  --primary-color: #FF6B6B;      /* Rouge pour les votes négatifs */
+  --secondary-color: #4ECDC4;    /* Vert pour les votes positifs */
+  --neutral-color: #95A5A6;      /* Gris neutre */
+  --background-color: #F8F9FA;   /* Fond clair */
+  --text-color: #2C3E50;         /* Texte principal */
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Animations */
+.swipe-left { transform: translateX(-100%); opacity: 0; }
+.swipe-right { transform: translateX(100%); opacity: 0; }
+.fade-in { animation: fadeIn 0.3s ease-in; }
+```
+
+#### Composants UI
+- **QuestionCard** : Carte avec ombre, coins arrondis, typographie claire
+- **VoteButtons** : Boutons circulaires avec icônes, états hover/active
+- **CategorySelector** : Grille de catégories avec icônes et couleurs
+- **ProgressBar** : Barre de progression avec pourcentage
+
+#### Responsive Design
+- **Mobile First** : Optimisé pour les écrans tactiles
+- **Breakpoints** : 320px, 768px, 1024px, 1440px
+- **Gestures** : Swipe, tap, long press
+- **Accessibilité** : Support des lecteurs d'écran
+
+### 8. Spécifications techniques détaillées
+
+#### API Endpoints
+```typescript
+// Questions
+GET /api/questions?category={categoryId}&limit={number}
+GET /api/questions/{questionId}
+POST /api/questions/{questionId}/vote
+
+// Catégories
+GET /api/categories
+GET /api/categories/{categoryId}/stats
+
+// Utilisateurs
+GET /api/users/{userId}/votes
+GET /api/users/{userId}/stats
+```
+
+#### Gestion d'état
+```typescript
+// Store principal avec Zustand
+interface AppState {
+  // Questions
+  questions: Question[];
+  currentQuestionIndex: number;
+  currentCategory: Category | null;
+  
+  // Votes
+  userVotes: UserVote[];
+  isLoading: boolean;
+  
+  // Actions
+  fetchQuestions: (categoryId: string) => Promise<void>;
+  submitVote: (questionId: string, vote: 'like' | 'dislike') => void;
+  nextQuestion: () => void;
+}
+```
+
+#### Performance
+- **Lazy Loading** : Chargement des questions par batch
+- **Caching** : Cache local des questions et votes
+- **Optimisation** : Images optimisées, code splitting
+- **Monitoring** : Métriques de performance
+
+### 9. Critères d'acceptation
+
+#### Fonctionnels
+- [ ] L'utilisateur peut sélectionner une catégorie
+- [ ] Les questions s'affichent une par une
+- [ ] L'utilisateur peut voter like/dislike
+- [ ] La progression est sauvegardée
+- [ ] Les statistiques sont calculées
+
+#### Non-fonctionnels
+- [ ] Temps de chargement < 2 secondes
+- [ ] Support des écrans 320px à 1440px
+- [ ] Accessibilité WCAG 2.1 AA
+- [ ] Tests avec 80% de couverture
+
+### 10. Risques et mitigation
+
+#### Risques techniques
+- **Performance** : Optimisation des animations et requêtes
+- **Compatibilité** : Tests sur différents navigateurs
+- **Données** : Validation et sanitisation des entrées
+
+#### Risques produit
+- **Adoption** : Tests utilisateurs précoces
+- **Engagement** : Gamification et feedback
+- **Qualité** : Tests automatisés et manuels
+
+### 11. Plan de test
+
+#### Tests unitaires
+- Composants React avec React Testing Library
+- Hooks personnalisés
+- Utilitaires et services
+
+#### Tests d'intégration
+- Flux de vote complet
+- Synchronisation avec l'API
+- Gestion des erreurs
+
+#### Tests E2E
+- Parcours utilisateur complet
+- Scénarios d'erreur
+- Performance et accessibilité
+
+### 12. Métriques et KPIs
+
+#### Métriques techniques
+- Temps de chargement des questions
+- Taux d'erreur des votes
+- Performance des animations
+
+#### Métriques produit
+- Taux de participation par catégorie
+- Temps moyen par question
+- Taux de rétention des utilisateurs
+
+### 13. Documentation utilisateur
+
+#### Guide utilisateur
+- Comment sélectionner une catégorie
+- Comment voter sur une question
+- Comment consulter ses statistiques
+- FAQ et dépannage
+
+#### Documentation technique
+- Architecture et composants
+- API et intégrations
+- Déploiement et maintenance

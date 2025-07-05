@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 /* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 } */
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -13,6 +22,11 @@ body {
   display: flex;
   justify-content: center;
   background-color: rgb(225, 231, 225);
+<<<<<<< HEAD
+=======
+  
+
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 }
 
 .app {
@@ -22,7 +36,10 @@ body {
   position: relative;
   overflow: hidden;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 .app::before {
   content: "";
   position: absolute;
@@ -42,7 +59,10 @@ body {
   text-align: center;
   padding: 30px 20px;
   color: rgb(0, 0, 0);
+<<<<<<< HEAD
   background: none
+=======
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 }
 
 .app-header h1 {
@@ -117,7 +137,12 @@ body {
 }
 
 .loading-spinner {
+<<<<<<< HEAD
 
+=======
+  width: 50px;
+  height: 50px;
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
   border: 4px solid rgba(255, 255, 255, 0.3);
   border-top: 4px solid white;
   border-radius: 50%;
@@ -163,4 +188,8 @@ body {
     font-size: 0.8rem;
     padding: 8px 12px;
   }
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)

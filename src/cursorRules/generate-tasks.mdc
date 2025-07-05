@@ -3,11 +3,15 @@ description:
 globs: 
 alwaysApply: false
 ---
+<<<<<<< HEAD
 ---
 description: 
 globs: 
 alwaysApply: false
 ---
+=======
+<<<<<<< HEAD
+>>>>>>> 0bd1bb7 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 # Règles Cursor pour la génération de tâches - Projet Pulsy
 
 ## Contexte du projet
@@ -20,6 +24,20 @@ Pulsy est une application web interactive de type Tinder où les utilisateurs r�
 - **Composants**: Radix UI + Lucide React
 - **Build**: Vite avec TypeScript strict
 - **Linting**: ESLint avec règles TypeScript
+=======
+# Règles Cursor pour la génération de tâches - Projet Tinder-like Référendum
+
+## Contexte du projet
+Application mobile/web de type Tinder où les utilisateurs répondent à des questions de type référendum (pour/contre) organisées par catégories. Interface avec boutons like/dislike pour les réponses.
+
+## Stack technique
+- **Frontend**: React 19 + TypeScript + Vite
+- **Styling**: CSS modules ou styled-components
+- **État**: React hooks (useState, useContext) ou Zustand
+- **Navigation**: React Router
+- **API**: Fetch ou Axios
+- **Tests**: Vitest + React Testing Library
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 
 ## Règles de génération de tâches
 
@@ -37,26 +55,44 @@ Chaque tâche doit inclure :
 #### 🎨 Interface utilisateur (UI)
 - Composants réutilisables (boutons, cartes, modales)
 - Animations de swipe (like/dislike)
+<<<<<<< HEAD
 - Design responsive mobile-first avec Tailwind
+=======
+- Design responsive mobile-first
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 - Thème et palette de couleurs cohérents
 - Indicateurs visuels de progression
 
 #### 🔄 Logique métier (Business Logic)
+<<<<<<< HEAD
 - Gestion des questions et votes
 - Système de progression
 - Algorithme de navigation
+=======
+- Gestion des catégories de questions
+- Système de scoring et matching
+- Algorithme de recommandation
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 - Gestion des réponses utilisateur
 - Statistiques et analytics
 
 #### 📊 Gestion d'état (State Management)
 - État global de l'application
 - Cache des questions et réponses
+<<<<<<< HEAD
 - Synchronisation avec le backend (futur)
+=======
+- Synchronisation avec le backend
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 - Gestion des sessions utilisateur
 - Persistance locale
 
 #### 🔌 API et données (API & Data)
+<<<<<<< HEAD
 - Endpoints REST/GraphQL (futur)
+=======
+- Endpoints REST/GraphQL
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 - Modèles de données TypeScript
 - Validation des données
 - Gestion des erreurs
@@ -75,15 +111,27 @@ Chaque tâche doit inclure :
 ```typescript
 // Composants de présentation
 QuestionCard.tsx
+<<<<<<< HEAD
 ProgressBar.tsx
+=======
+CategorySelector.tsx
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 VoteButtons.tsx
 
 // Composants de conteneur
 QuestionContainer.tsx
+<<<<<<< HEAD
 VoteContainer.tsx
 
 // Pages
 HomePage.tsx
+=======
+CategoryContainer.tsx
+
+// Pages
+HomePage.tsx
+CategoryPage.tsx
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 ResultsPage.tsx
 ```
 
@@ -92,6 +140,7 @@ ResultsPage.tsx
 // Interfaces principales
 interface Question {
   id: string;
+<<<<<<< HEAD
   question: string;
   category: string;
 }
@@ -110,6 +159,30 @@ interface AppData {
 #### Styles Tailwind
 ```css
 /* Classes Tailwind avec BEM-like naming */
+=======
+  text: string;
+  category: string;
+  tags: string[];
+}
+
+interface UserResponse {
+  questionId: string;
+  vote: 'like' | 'dislike';
+  timestamp: Date;
+}
+
+interface Category {
+  id: string;
+  name: string;
+  description: string;
+  questionCount: number;
+}
+```
+
+#### Styles CSS
+```css
+/* BEM methodology */
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 .question-card {}
 .question-card__header {}
 .question-card__content {}
@@ -122,6 +195,7 @@ interface AppData {
 
 ### 4. Patterns d'architecture
 
+<<<<<<< HEAD
 #### Structure des dossiers actuelle
 ```
 src/
@@ -143,13 +217,42 @@ useVoting(questionId: string)
 useProgress(currentIndex: number, total: number)
 useSwipeGestures()
 useLocalStorage(key: string)
+=======
+#### Structure des dossiers
+```
+src/
+├── components/
+│   ├── ui/           # Composants réutilisables
+│   ├── features/     # Composants spécifiques aux fonctionnalités
+│   └── layout/       # Composants de mise en page
+├── hooks/            # Custom hooks
+├── services/         # Services API
+├── stores/           # Gestion d'état
+├── types/            # Types TypeScript
+├── utils/            # Utilitaires
+└── pages/            # Pages de l'application
+```
+
+#### Hooks personnalisés
+```typescript
+// Exemples de hooks à créer
+useQuestions(categoryId: string)
+useVoting(questionId: string)
+useCategories()
+useUserProfile()
+useMatchmaking()
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 ```
 
 ### 5. Critères de qualité
 
 #### Performance
 - Lazy loading des composants
+<<<<<<< HEAD
 - Optimisation des animations
+=======
+- Optimisation des images
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 - Debouncing des interactions
 - Cache intelligent des données
 
@@ -167,6 +270,7 @@ useLocalStorage(key: string)
 
 ### 6. Exemples de tâches
 
+<<<<<<< HEAD
 #### Tâche UI - Amélioration QuestionCard
 **Titre**: Améliorer l'animation de swipe du QuestionCard
 **Description**: Optimiser les animations de swipe pour une expérience plus fluide
@@ -185,10 +289,31 @@ useLocalStorage(key: string)
 **Description**: Extraire la logique de gestion des questions dans un service réutilisable
 **Critères d'acceptation**:
 1. Service pour charger les questions depuis JSON
+=======
+#### Tâche UI - Composant QuestionCard
+**Titre**: Créer le composant QuestionCard avec animation de swipe
+**Description**: Développer un composant de carte pour afficher les questions avec animation de swipe like/dislike
+**Critères d'acceptation**:
+1. Affichage du texte de la question
+2. Boutons like/dislike avec icônes
+3. Animation de swipe vers la gauche/droite
+4. Responsive design mobile-first
+5. Tests unitaires avec 80% de couverture
+**Estimation**: 4h
+**Priorité**: High
+**Tags**: [UI], [Test]
+
+#### Tâche API - Service de questions
+**Titre**: Implémenter le service API pour récupérer les questions par catégorie
+**Description**: Créer un service pour gérer les appels API vers le backend
+**Critères d'acceptation**:
+1. Fonction pour récupérer les questions par catégorie
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 2. Gestion des erreurs et retry
 3. Cache des données avec TTL
 4. Types TypeScript pour les réponses
 5. Tests d'intégration
+<<<<<<< HEAD
 **Estimation**: 2h
 **Priorité**: High
 **Tags**: [API], [Test]
@@ -206,6 +331,12 @@ useLocalStorage(key: string)
 **Priorité**: High
 **Tags**: [State], [Test]
 
+=======
+**Estimation**: 3h
+**Priorité**: High
+**Tags**: [API], [Test]
+
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 ### 7. Workflow de développement
 
 #### Branches Git
@@ -216,9 +347,15 @@ useLocalStorage(key: string)
 
 #### Commits
 ```
+<<<<<<< HEAD
 feat: améliorer l'animation de swipe du QuestionCard
 fix: corriger la gestion des votes sur mobile
 refactor: extraire la logique de vote dans un hook
+=======
+feat: ajouter le composant QuestionCard
+fix: corriger l'animation de swipe sur mobile
+refactor: optimiser les performances du service API
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 test: ajouter les tests pour useVoting hook
 docs: mettre à jour la documentation des composants
 ```
@@ -229,6 +366,7 @@ docs: mettre à jour la documentation des composants
 - Respect des conventions de nommage
 - Performance et accessibilité
 - Documentation des composants complexes
+<<<<<<< HEAD
 
 ### 8. Évolutions futures
 
@@ -280,4 +418,275 @@ docs: mettre à jour la documentation des composants
 - Temps de chargement < 2s
 - Taux d'erreur < 1%
 - Taux de completion > 90%
+<<<<<<< HEAD
 - Satisfaction utilisateur > 4.5/5
+=======
+- Satisfaction utilisateur > 4.5/5
+=======
+```
+
+## Fichier create-prd.mdc
+
+```markdown:create-prd.mdc
+# Règles Cursor pour la création de PRD - Projet Tinder-like Référendum
+
+## Contexte du projet
+Application de type Tinder pour répondre à des questions de référendum avec interface like/dislike, organisée par catégories thématiques.
+
+## Structure du PRD (Product Requirements Document)
+
+### 1. En-tête du document
+```markdown
+# PRD - [Nom de la fonctionnalité]
+**Version**: 1.0
+**Date**: [Date]
+**Auteur**: [Nom]
+**Statut**: Draft/Review/Approved
+**Priorité**: High/Medium/Low
+```
+
+### 2. Résumé exécutif
+- **Objectif** : Description claire de la fonctionnalité
+- **Valeur utilisateur** : Bénéfice principal pour l'utilisateur
+- **Métriques de succès** : KPIs à mesurer
+- **Timeline** : Estimation de développement
+
+### 3. Contexte et problème
+- **Problème actuel** : Ce qui ne fonctionne pas aujourd'hui
+- **Impact** : Conséquences du problème
+- **Opportunité** : Pourquoi résoudre maintenant
+- **Personas** : Utilisateurs cibles
+
+### 4. Solution proposée
+- **Vue d'ensemble** : Description de la solution
+- **Fonctionnalités clés** : Liste des features principales
+- **Flux utilisateur** : Parcours utilisateur détaillé
+- **Intégrations** : APIs et services externes
+
+### 5. Spécifications techniques
+
+#### Architecture
+```typescript
+// Exemples de structures de données
+interface Question {
+  id: string;
+  text: string;
+  category: Category;
+  difficulty: 'easy' | 'medium' | 'hard';
+  tags: string[];
+  createdAt: Date;
+}
+
+interface UserVote {
+  userId: string;
+  questionId: string;
+  vote: 'like' | 'dislike';
+  timestamp: Date;
+  category: string;
+}
+
+interface Category {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  color: string;
+  questionCount: number;
+}
+```
+
+#### Composants React
+```typescript
+// Structure des composants principaux
+<App>
+  <Router>
+    <Layout>
+      <CategorySelector />
+      <QuestionSwiper>
+        <QuestionCard />
+        <VoteButtons />
+      </QuestionSwiper>
+      <ProgressIndicator />
+    </Layout>
+  </Router>
+</App>
+```
+
+### 6. Spécifications fonctionnelles
+
+#### Fonctionnalités principales
+1. **Sélection de catégorie**
+   - Liste des catégories disponibles
+   - Prévisualisation du nombre de questions
+   - Navigation intuitive
+
+2. **Interface de vote**
+   - Carte de question avec texte clair
+   - Boutons like/dislike avec feedback visuel
+   - Animation de swipe
+   - Progression visible
+
+3. **Gestion des réponses**
+   - Sauvegarde locale des votes
+   - Synchronisation avec le backend
+   - Historique des réponses
+
+4. **Statistiques personnelles**
+   - Résumé par catégorie
+   - Tendances de vote
+   - Comparaison avec la moyenne
+
+#### Règles métier
+- Un utilisateur ne peut voter qu'une fois par question
+- Les questions sont présentées aléatoirement dans une catégorie
+- Progression sauvegardée automatiquement
+- Possibilité de changer son vote (avec limite de temps)
+
+### 7. Spécifications UI/UX
+
+#### Design System
+```css
+/* Palette de couleurs */
+:root {
+  --primary-color: #FF6B6B;      /* Rouge pour les votes négatifs */
+  --secondary-color: #4ECDC4;    /* Vert pour les votes positifs */
+  --neutral-color: #95A5A6;      /* Gris neutre */
+  --background-color: #F8F9FA;   /* Fond clair */
+  --text-color: #2C3E50;         /* Texte principal */
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Animations */
+.swipe-left { transform: translateX(-100%); opacity: 0; }
+.swipe-right { transform: translateX(100%); opacity: 0; }
+.fade-in { animation: fadeIn 0.3s ease-in; }
+```
+
+#### Composants UI
+- **QuestionCard** : Carte avec ombre, coins arrondis, typographie claire
+- **VoteButtons** : Boutons circulaires avec icônes, états hover/active
+- **CategorySelector** : Grille de catégories avec icônes et couleurs
+- **ProgressBar** : Barre de progression avec pourcentage
+
+#### Responsive Design
+- **Mobile First** : Optimisé pour les écrans tactiles
+- **Breakpoints** : 320px, 768px, 1024px, 1440px
+- **Gestures** : Swipe, tap, long press
+- **Accessibilité** : Support des lecteurs d'écran
+
+### 8. Spécifications techniques détaillées
+
+#### API Endpoints
+```typescript
+// Questions
+GET /api/questions?category={categoryId}&limit={number}
+GET /api/questions/{questionId}
+POST /api/questions/{questionId}/vote
+
+// Catégories
+GET /api/categories
+GET /api/categories/{categoryId}/stats
+
+// Utilisateurs
+GET /api/users/{userId}/votes
+GET /api/users/{userId}/stats
+```
+
+#### Gestion d'état
+```typescript
+// Store principal avec Zustand
+interface AppState {
+  // Questions
+  questions: Question[];
+  currentQuestionIndex: number;
+  currentCategory: Category | null;
+  
+  // Votes
+  userVotes: UserVote[];
+  isLoading: boolean;
+  
+  // Actions
+  fetchQuestions: (categoryId: string) => Promise<void>;
+  submitVote: (questionId: string, vote: 'like' | 'dislike') => void;
+  nextQuestion: () => void;
+}
+```
+
+#### Performance
+- **Lazy Loading** : Chargement des questions par batch
+- **Caching** : Cache local des questions et votes
+- **Optimisation** : Images optimisées, code splitting
+- **Monitoring** : Métriques de performance
+
+### 9. Critères d'acceptation
+
+#### Fonctionnels
+- [ ] L'utilisateur peut sélectionner une catégorie
+- [ ] Les questions s'affichent une par une
+- [ ] L'utilisateur peut voter like/dislike
+- [ ] La progression est sauvegardée
+- [ ] Les statistiques sont calculées
+
+#### Non-fonctionnels
+- [ ] Temps de chargement < 2 secondes
+- [ ] Support des écrans 320px à 1440px
+- [ ] Accessibilité WCAG 2.1 AA
+- [ ] Tests avec 80% de couverture
+
+### 10. Risques et mitigation
+
+#### Risques techniques
+- **Performance** : Optimisation des animations et requêtes
+- **Compatibilité** : Tests sur différents navigateurs
+- **Données** : Validation et sanitisation des entrées
+
+#### Risques produit
+- **Adoption** : Tests utilisateurs précoces
+- **Engagement** : Gamification et feedback
+- **Qualité** : Tests automatisés et manuels
+
+### 11. Plan de test
+
+#### Tests unitaires
+- Composants React avec React Testing Library
+- Hooks personnalisés
+- Utilitaires et services
+
+#### Tests d'intégration
+- Flux de vote complet
+- Synchronisation avec l'API
+- Gestion des erreurs
+
+#### Tests E2E
+- Parcours utilisateur complet
+- Scénarios d'erreur
+- Performance et accessibilité
+
+### 12. Métriques et KPIs
+
+#### Métriques techniques
+- Temps de chargement des questions
+- Taux d'erreur des votes
+- Performance des animations
+
+#### Métriques produit
+- Taux de participation par catégorie
+- Temps moyen par question
+- Taux de rétention des utilisateurs
+
+### 13. Documentation utilisateur
+
+#### Guide utilisateur
+- Comment sélectionner une catégorie
+- Comment voter sur une question
+- Comment consulter ses statistiques
+- FAQ et dépannage
+
+#### Documentation technique
+- Architecture et composants
+- API et intégrations
+- Déploiement et maintenance
+```
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
+
+>>>>>>> 0bd1bb7 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)

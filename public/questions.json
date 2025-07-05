@@ -3,6 +3,7 @@
     {
       "id": "1",
       "category": "Bridge Governance Tokens",
+<<<<<<< HEAD
       "question": "Are you in favor of integrating AI systems to automate and secure governance decisions for cross-chain bridges?",
       "communityStats": {
         "like": 65,
@@ -10,10 +11,14 @@
         "idk": 10,
         "totalVotes": 1247
       }
+=======
+      "question": "Are you in favor of integrating AI systems to automate and secure governance decisions for cross-chain bridges?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "2",
       "category": "Bridge Governance Tokens",
+<<<<<<< HEAD
       "question": "Are you in favor of using DIDs to enhance transparency and accountability in bridge token governance?",
       "communityStats": {
         "like": 78,
@@ -21,10 +26,14 @@
         "idk": 7,
         "totalVotes": 1156
       }
+=======
+      "question": "Are you in favor of using DIDs to enhance transparency and accountability in bridge token governance?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "3",
       "category": "Bridge Governance Tokens",
+<<<<<<< HEAD
       "question": "Are you in favor of integrating self-sovereign identity (DID) based authentication mechanisms in bridge governance?",
       "communityStats": {
         "like": 72,
@@ -32,10 +41,14 @@
         "idk": 8,
         "totalVotes": 1089
       }
+=======
+      "question": "Are you in favor of integrating self-sovereign identity (DID) based authentication mechanisms in bridge governance?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "4",
       "category": "Bridge Governance Tokens",
+<<<<<<< HEAD
       "question": "Are you in favor of using AI to detect and prevent fraud in bridge token governance processes?",
       "communityStats": {
         "like": 85,
@@ -43,10 +56,14 @@
         "idk": 5,
         "totalVotes": 1342
       }
+=======
+      "question": "Are you in favor of using AI to detect and prevent fraud in bridge token governance processes?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "5",
       "category": "Bridge Governance Tokens",
+<<<<<<< HEAD
       "question": "Are you in favor of decentralized bridge governance assisted by AI-powered oracles?",
       "communityStats": {
         "like": 58,
@@ -54,10 +71,14 @@
         "idk": 10,
         "totalVotes": 987
       }
+=======
+      "question": "Are you in favor of decentralized bridge governance assisted by AI-powered oracles?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "6",
       "category": "Bridge Governance Tokens",
+<<<<<<< HEAD
       "question": "Are you in favor of governance token holders voting through DID-based systems to guarantee voter identity?",
       "communityStats": {
         "like": 68,
@@ -65,10 +86,14 @@
         "idk": 10,
         "totalVotes": 1123
       }
+=======
+      "question": "Are you in favor of governance token holders voting through DID-based systems to guarantee voter identity?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "7",
       "category": "Bridge Governance Tokens",
+<<<<<<< HEAD
       "question": "Are you in favor of implementing AI-driven automated arbitration mechanisms for governance disputes related to bridges?",
       "communityStats": {
         "like": 20,
@@ -76,10 +101,14 @@
         "idk": 15,
         "totalVotes": 876
       }
+=======
+      "question": "Are you in favor of implementing AI-driven automated arbitration mechanisms for governance disputes related to bridges?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "8",
       "category": "Bridge Governance Tokens",
+<<<<<<< HEAD
       "question": "Are you in favor of bridge governance protocols integrating AI predictive analytics to anticipate security risks?",
       "communityStats": {
         "like": 82,
@@ -87,10 +116,14 @@
         "idk": 6,
         "totalVotes": 1456
       }
+=======
+      "question": "Are you in favor of bridge governance protocols integrating AI predictive analytics to anticipate security risks?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "9",
       "category": "Bridge Governance Tokens",
+<<<<<<< HEAD
       "question": "Are you in favor of issuing bridge governance tokens only to entities verified via DID?",
       "communityStats": {
         "like": 55,
@@ -98,10 +131,14 @@
         "idk": 10,
         "totalVotes": 923
       }
+=======
+      "question": "Are you in favor of issuing bridge governance tokens only to entities verified via DID?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "10",
       "category": "Bridge Governance Tokens",
+<<<<<<< HEAD
       "question": "Are you in favor of creating a regulatory framework incorporating AI and DID to govern cross-chain bridge governance?",
       "communityStats": {
         "like": 62,
@@ -109,10 +146,14 @@
         "idk": 10,
         "totalVotes": 1056
       }
+=======
+      "question": "Are you in favor of creating a regulatory framework incorporating AI and DID to govern cross-chain bridge governance?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "11",
       "category": "Decentralized Finance (DeFi)",
+<<<<<<< HEAD
       "question": "Are you in favor of prioritizing UX improvements to drive mainstream DeFi adoption?",
       "communityStats": {
         "like": 88,
@@ -120,10 +161,14 @@
         "idk": 4,
         "totalVotes": 1678
       }
+=======
+      "question": "Are you in favor of prioritizing UX improvements to drive mainstream DeFi adoption?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "12",
       "category": "Decentralized Finance (DeFi)",
+<<<<<<< HEAD
       "question": "Are you in favor of cross-chain solutions to resolve liquidity fragmentation in DeFi?",
       "communityStats": {
         "like": 75,
@@ -131,10 +176,14 @@
         "idk": 7,
         "totalVotes": 1345
       }
+=======
+      "question": "Are you in favor of cross-chain solutions to resolve liquidity fragmentation in DeFi?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "13",
       "category": "Decentralized Finance (DeFi)",
+<<<<<<< HEAD
       "question": "Are you in favor of large-scale integration of real-world assets (RWA) into DeFi protocols?",
       "communityStats": {
         "like": 70,
@@ -142,10 +191,14 @@
         "idk": 8,
         "totalVotes": 1189
       }
+=======
+      "question": "Are you in favor of large-scale integration of real-world assets (RWA) into DeFi protocols?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "14",
       "category": "Decentralized Identifier (DID)",
+<<<<<<< HEAD
       "question": "Are you in favor of prioritizing data privacy in DID systems?",
       "communityStats": {
         "like": 92,
@@ -153,10 +206,14 @@
         "idk": 3,
         "totalVotes": 1892
       }
+=======
+      "question": "Are you in favor of prioritizing data privacy in DID systems?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "15",
       "category": "Decentralized Identifier (DID)",
+<<<<<<< HEAD
       "question": "Are you in favor of DID onboarding processes that are entirely independent of Web2 services?",
       "communityStats": {
         "like": 65,
@@ -164,10 +221,14 @@
         "idk": 10,
         "totalVotes": 1023
       }
+=======
+      "question": "Are you in favor of DID onboarding processes that are entirely independent of Web2 services?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "16",
       "category": "Decentralized Identifier (DID)",
+<<<<<<< HEAD
       "question": "Are you in favor of using biometric identity models (e.g., Worldcoin) in DID systems?",
       "communityStats": {
         "like": 15,
@@ -175,10 +236,14 @@
         "idk": 10,
         "totalVotes": 1456
       }
+=======
+      "question": "Are you in favor of using biometric identity models (e.g., Worldcoin) in DID systems?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "17",
       "category": "Decentralized Identifier (DID)",
+<<<<<<< HEAD
       "question": "Are you in favor of integrating DIDs into compliant KYC/AML frameworks?",
       "communityStats": {
         "like": 25,
@@ -186,10 +251,14 @@
         "idk": 10,
         "totalVotes": 987
       }
+=======
+      "question": "Are you in favor of integrating DIDs into compliant KYC/AML frameworks?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "18",
       "category": "Decentralized Identifier (DID)",
+<<<<<<< HEAD
       "question": "Are you in favor of on-chain mechanisms to recover lost identities in self-sovereign systems?",
       "communityStats": {
         "like": 58,
@@ -197,10 +266,14 @@
         "idk": 10,
         "totalVotes": 1123
       }
+=======
+      "question": "Are you in favor of on-chain mechanisms to recover lost identities in self-sovereign systems?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "19",
       "category": "Oracle",
+<<<<<<< HEAD
       "question": "Are you in favor of integrating AI into oracles to improve the quality and reliability of data provided?",
       "communityStats": {
         "like": 78,
@@ -208,10 +281,14 @@
         "idk": 7,
         "totalVotes": 1345
       }
+=======
+      "question": "Are you in favor of integrating AI into oracles to improve the quality and reliability of data provided?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "20",
       "category": "Oracle",
+<<<<<<< HEAD
       "question": "Are you in favor of oracles using AI-assisted decentralized governance mechanisms to validate data?",
       "communityStats": {
         "like": 68,
@@ -219,10 +296,14 @@
         "idk": 10,
         "totalVotes": 1156
       }
+=======
+      "question": "Are you in favor of oracles using AI-assisted decentralized governance mechanisms to validate data?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "21",
       "category": "Oracle",
+<<<<<<< HEAD
       "question": "Are you in favor of using AI-powered oracles to automatically detect erroneous or fraudulent data?",
       "communityStats": {
         "like": 85,
@@ -230,10 +311,14 @@
         "idk": 5,
         "totalVotes": 1567
       }
+=======
+      "question": "Are you in favor of using AI-powered oracles to automatically detect erroneous or fraudulent data?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "22",
       "category": "Oracle",
+<<<<<<< HEAD
       "question": "Are you in favor of adopting open standards for interoperability of AI-powered oracles across blockchains?",
       "communityStats": {
         "like": 82,
@@ -241,10 +326,14 @@
         "idk": 6,
         "totalVotes": 1432
       }
+=======
+      "question": "Are you in favor of adopting open standards for interoperability of AI-powered oracles across blockchains?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "23",
       "category": "Oracle",
+<<<<<<< HEAD
       "question": "Are you in favor of oracles providing AI-based predictive analytics services to smart contracts?",
       "communityStats": {
         "like": 72,
@@ -252,10 +341,14 @@
         "idk": 8,
         "totalVotes": 1234
       }
+=======
+      "question": "Are you in favor of oracles providing AI-based predictive analytics services to smart contracts?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "24",
       "category": "Oracle",
+<<<<<<< HEAD
       "question": "Are you in favor of oracle governance including AI models to arbitrate disputes over data quality?",
       "communityStats": {
         "like": 55,
@@ -263,10 +356,14 @@
         "idk": 10,
         "totalVotes": 987
       }
+=======
+      "question": "Are you in favor of oracle governance including AI models to arbitrate disputes over data quality?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "25",
       "category": "Oracle",
+<<<<<<< HEAD
       "question": "Are you in favor of oracles being capable of learning and improving their performance through machine learning techniques?",
       "communityStats": {
         "like": 75,
@@ -274,10 +371,14 @@
         "idk": 7,
         "totalVotes": 1345
       }
+=======
+      "question": "Are you in favor of oracles being capable of learning and improving their performance through machine learning techniques?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "26",
       "category": "Oracle",
+<<<<<<< HEAD
       "question": "Are you in favor of tokenizing oracle governance rights with AI-based incentive mechanisms?",
       "communityStats": {
         "like": 62,
@@ -285,10 +386,14 @@
         "idk": 10,
         "totalVotes": 1089
       }
+=======
+      "question": "Are you in favor of tokenizing oracle governance rights with AI-based incentive mechanisms?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "27",
       "category": "Oracle",
+<<<<<<< HEAD
       "question": "Are you in favor of oracles collaborating with decentralized AI networks to enhance data robustness?",
       "communityStats": {
         "like": 68,
@@ -296,10 +401,14 @@
         "idk": 10,
         "totalVotes": 1156
       }
+=======
+      "question": "Are you in favor of oracles collaborating with decentralized AI networks to enhance data robustness?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "28",
       "category": "Oracle",
+<<<<<<< HEAD
       "question": "Are you in favor of developing oracles capable of performing complex on-chain computations via integrated AI?",
       "communityStats": {
         "like": 58,
@@ -307,10 +416,14 @@
         "idk": 10,
         "totalVotes": 1023
       }
+=======
+      "question": "Are you in favor of developing oracles capable of performing complex on-chain computations via integrated AI?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "29",
       "category": "Data Availability (DA)",
+<<<<<<< HEAD
       "question": "Are you in favor of using knowledge graphs to improve blockchain data access and structuring?",
       "communityStats": {
         "like": 72,
@@ -318,10 +431,14 @@
         "idk": 8,
         "totalVotes": 1234
       }
+=======
+      "question": "Are you in favor of using knowledge graphs to improve blockchain data access and structuring?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "30",
       "category": "Data Availability (DA)",
+<<<<<<< HEAD
       "question": "Are you in favor of integrating AI in Data Availability protocols to optimize data verification and analysis?",
       "communityStats": {
         "like": 78,
@@ -329,10 +446,14 @@
         "idk": 7,
         "totalVotes": 1456
       }
+=======
+      "question": "Are you in favor of integrating AI in Data Availability protocols to optimize data verification and analysis?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "31",
       "category": "Data Availability (DA)",
+<<<<<<< HEAD
       "question": "Are you in favor of using knowledge graphs as an intermediary layer for querying modular blockchains?",
       "communityStats": {
         "like": 65,
@@ -340,10 +461,14 @@
         "idk": 10,
         "totalVotes": 1089
       }
+=======
+      "question": "Are you in favor of using knowledge graphs as an intermediary layer for querying modular blockchains?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "32",
       "category": "Data Availability (DA)",
+<<<<<<< HEAD
       "question": "Are you in favor of developing open standards for interoperability of blockchain-related knowledge graphs?",
       "communityStats": {
         "like": 82,
@@ -351,10 +476,14 @@
         "idk": 6,
         "totalVotes": 1567
       }
+=======
+      "question": "Are you in favor of developing open standards for interoperability of blockchain-related knowledge graphs?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "33",
       "category": "Data Availability (DA)",
+<<<<<<< HEAD
       "question": "Are you in favor of AI-driven automation for updates and maintenance of knowledge graphs in DA systems?",
       "communityStats": {
         "like": 75,
@@ -362,10 +491,14 @@
         "idk": 7,
         "totalVotes": 1345
       }
+=======
+      "question": "Are you in favor of AI-driven automation for updates and maintenance of knowledge graphs in DA systems?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "34",
       "category": "Data Availability (DA)",
+<<<<<<< HEAD
       "question": "Are you in favor of DA protocols including AI tools to automatically detect and correct errors in published data?",
       "communityStats": {
         "like": 88,
@@ -373,10 +506,14 @@
         "idk": 4,
         "totalVotes": 1678
       }
+=======
+      "question": "Are you in favor of DA protocols including AI tools to automatically detect and correct errors in published data?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "35",
       "category": "Data Availability (DA)",
+<<<<<<< HEAD
       "question": "Are you in favor of DA platforms leveraging AI to provide predictive analytics based on historical blockchain data?",
       "communityStats": {
         "like": 70,
@@ -384,10 +521,14 @@
         "idk": 8,
         "totalVotes": 1189
       }
+=======
+      "question": "Are you in favor of DA platforms leveraging AI to provide predictive analytics based on historical blockchain data?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "36",
       "category": "Data Availability (DA)",
+<<<<<<< HEAD
       "question": "Are you in favor of AI-powered knowledge graphs becoming a key layer in modular blockchain infrastructures?",
       "communityStats": {
         "like": 68,
@@ -395,10 +536,14 @@
         "idk": 10,
         "totalVotes": 1156
       }
+=======
+      "question": "Are you in favor of AI-powered knowledge graphs becoming a key layer in modular blockchain infrastructures?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "37",
       "category": "Data Availability (DA)",
+<<<<<<< HEAD
       "question": "Are you in favor of AI tools querying knowledge graphs being open source for the blockchain community?",
       "communityStats": {
         "like": 85,
@@ -406,10 +551,14 @@
         "idk": 5,
         "totalVotes": 1432
       }
+=======
+      "question": "Are you in favor of AI tools querying knowledge graphs being open source for the blockchain community?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "38",
       "category": "Data Availability (DA)",
+<<<<<<< HEAD
       "question": "Are you in favor of integrating token-based monetization for knowledge graph and AI services within DA protocols?",
       "communityStats": {
         "like": 55,
@@ -417,10 +566,14 @@
         "idk": 10,
         "totalVotes": 987
       }
+=======
+      "question": "Are you in favor of integrating token-based monetization for knowledge graph and AI services within DA protocols?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "39",
       "category": "Smart Contract Platform",
+<<<<<<< HEAD
       "question": "Are you in favor of integrating AI models into smart contracts to make them more autonomous and context-aware?",
       "communityStats": {
         "like": 62,
@@ -428,10 +581,14 @@
         "idk": 10,
         "totalVotes": 1056
       }
+=======
+      "question": "Are you in favor of integrating AI models into smart contracts to make them more autonomous and context-aware?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "40",
       "category": "Smart Contract Platform",
+<<<<<<< HEAD
       "question": "Are you in favor of developing a smart contract language purpose-built for AI interaction?",
       "communityStats": {
         "like": 58,
@@ -439,10 +596,14 @@
         "idk": 10,
         "totalVotes": 923
       }
+=======
+      "question": "Are you in favor of developing a smart contract language purpose-built for AI interaction?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "41",
       "category": "Smart Contract Platform",
+<<<<<<< HEAD
       "question": "Are you in favor of predictive logic in smart contracts via AI to anticipate on/off-chain events?",
       "communityStats": {
         "like": 65,
@@ -450,10 +611,14 @@
         "idk": 10,
         "totalVotes": 1123
       }
+=======
+      "question": "Are you in favor of predictive logic in smart contracts via AI to anticipate on/off-chain events?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "42",
       "category": "Smart Contract Platform",
+<<<<<<< HEAD
       "question": "Are you in favor of on-chain AI agents capable of dynamically adjusting contract logic under defined conditions?",
       "communityStats": {
         "like": 20,
@@ -461,10 +626,14 @@
         "idk": 10,
         "totalVotes": 876
       }
+=======
+      "question": "Are you in favor of on-chain AI agents capable of dynamically adjusting contract logic under defined conditions?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "43",
       "category": "Smart Contract Platform",
+<<<<<<< HEAD
       "question": "Are you in favor of smart contracts that can self-evaluate and self-correct using embedded AI systems?",
       "communityStats": {
         "like": 55,
@@ -472,10 +641,14 @@
         "idk": 10,
         "totalVotes": 987
       }
+=======
+      "question": "Are you in favor of smart contracts that can self-evaluate and self-correct using embedded AI systems?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "44",
       "category": "Smart Contract Platform",
+<<<<<<< HEAD
       "question": "Are you in favor of AI-assisted governance embedded in smart contracts for arbitrating sensitive decisions?",
       "communityStats": {
         "like": 25,
@@ -483,10 +656,14 @@
         "idk": 10,
         "totalVotes": 823
       }
+=======
+      "question": "Are you in favor of AI-assisted governance embedded in smart contracts for arbitrating sensitive decisions?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "45",
       "category": "Smart Contract Platform",
+<<<<<<< HEAD
       "question": "Are you in favor of L1/L2 platforms natively supporting runtimes for AI agent execution?",
       "communityStats": {
         "like": 72,
@@ -494,10 +671,14 @@
         "idk": 8,
         "totalVotes": 1234
       }
+=======
+      "question": "Are you in favor of L1/L2 platforms natively supporting runtimes for AI agent execution?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "46",
       "category": "Smart Contract Platform",
+<<<<<<< HEAD
       "question": "Are you in favor of using on-chain AI models for real-time auditing of smart contract security?",
       "communityStats": {
         "like": 78,
@@ -505,10 +686,14 @@
         "idk": 7,
         "totalVotes": 1456
       }
+=======
+      "question": "Are you in favor of using on-chain AI models for real-time auditing of smart contract security?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "47",
       "category": "Smart Contract Platform",
+<<<<<<< HEAD
       "question": "Are you in favor of cross-chain standardization for AI-compatible smart contracts?",
       "communityStats": {
         "like": 75,
@@ -516,10 +701,14 @@
         "idk": 7,
         "totalVotes": 1345
       }
+=======
+      "question": "Are you in favor of cross-chain standardization for AI-compatible smart contracts?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "48",
       "category": "Smart Contract Platform",
+<<<<<<< HEAD
       "question": "Are you in favor of native AI copilots in future smart contract development environments?",
       "communityStats": {
         "like": 82,
@@ -527,10 +716,14 @@
         "idk": 6,
         "totalVotes": 1567
       }
+=======
+      "question": "Are you in favor of native AI copilots in future smart contract development environments?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "49",
       "category": "Artificial Intelligence (AI)",
+<<<<<<< HEAD
       "question": "Are you in favor of fully decentralized training of AI models?",
       "communityStats": {
         "like": 68,
@@ -538,10 +731,14 @@
         "idk": 10,
         "totalVotes": 1156
       }
+=======
+      "question": "Are you in favor of fully decentralized training of AI models?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "50",
       "category": "Artificial Intelligence (AI)",
+<<<<<<< HEAD
       "question": "Are you in favor of adopting dedicated governance models for decentralized AI networks?",
       "communityStats": {
         "like": 72,
@@ -549,10 +746,14 @@
         "idk": 8,
         "totalVotes": 1234
       }
+=======
+      "question": "Are you in favor of adopting dedicated governance models for decentralized AI networks?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "51",
       "category": "Artificial Intelligence (AI)",
+<<<<<<< HEAD
       "question": "Are you in favor of using AI-powered DAOs to solve complex coordination problems?",
       "communityStats": {
         "like": 65,
@@ -560,10 +761,14 @@
         "idk": 10,
         "totalVotes": 1089
       }
+=======
+      "question": "Are you in favor of using AI-powered DAOs to solve complex coordination problems?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "52",
       "category": "Artificial Intelligence (AI)",
+<<<<<<< HEAD
       "question": "Are you in favor of implementing safeguards to protect users from biased or harmful AI?",
       "communityStats": {
         "like": 88,
@@ -571,10 +776,14 @@
         "idk": 4,
         "totalVotes": 1678
       }
+=======
+      "question": "Are you in favor of implementing safeguards to protect users from biased or harmful AI?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "53",
       "category": "Artificial Intelligence (AI)",
+<<<<<<< HEAD
       "question": "Are you in favor of tokenizing ownership of AI models?",
       "communityStats": {
         "like": 58,
@@ -582,10 +791,14 @@
         "idk": 10,
         "totalVotes": 987
       }
+=======
+      "question": "Are you in favor of tokenizing ownership of AI models?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "54",
       "category": "Artificial Intelligence (AI)",
+<<<<<<< HEAD
       "question": "Are you in favor of developing real-world use cases combining blockchain and AI?",
       "communityStats": {
         "like": 85,
@@ -593,10 +806,14 @@
         "idk": 5,
         "totalVotes": 1456
       }
+=======
+      "question": "Are you in favor of developing real-world use cases combining blockchain and AI?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "55",
       "category": "Ethereum Ecosystem",
+<<<<<<< HEAD
       "question": "Are you in favor of the idea that current L2 rollup adoption makes Ethereum truly scalable?",
       "communityStats": {
         "like": 75,
@@ -604,10 +821,14 @@
         "idk": 7,
         "totalVotes": 1345
       }
+=======
+      "question": "Are you in favor of the idea that current L2 rollup adoption makes Ethereum truly scalable?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "56",
       "category": "Gaming (GameFi)",
+<<<<<<< HEAD
       "question": "Are you in favor of adopting a business model in Web3 gaming that prioritizes long-term sustainability over short-term gains?",
       "communityStats": {
         "like": 82,
@@ -615,10 +836,14 @@
         "idk": 6,
         "totalVotes": 1567
       }
+=======
+      "question": "Are you in favor of adopting a business model in Web3 gaming that prioritizes long-term sustainability over short-term gains?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "57",
       "category": "Gaming (GameFi)",
+<<<<<<< HEAD
       "question": "Are you in favor of limiting in-game tokens to utility-only functions, excluding speculation?",
       "communityStats": {
         "like": 20,
@@ -626,10 +851,14 @@
         "idk": 10,
         "totalVotes": 823
       }
+=======
+      "question": "Are you in favor of limiting in-game tokens to utility-only functions, excluding speculation?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     },
     {
       "id": "58",
       "category": "Gaming (GameFi)",
+<<<<<<< HEAD
       "question": "Are you in favor of designing GameFi systems that prioritize gameplay quality over financial incentives?",
       "communityStats": {
         "like": 78,
@@ -637,6 +866,9 @@
         "idk": 7,
         "totalVotes": 1345
       }
+=======
+      "question": "Are you in favor of designing GameFi systems that prioritize gameplay quality over financial incentives?"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
     }
   ]
 }

@@ -1,6 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import type { Question } from "../types/index";
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
+=======
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
 
 interface QuestionCardProps {
   question: Question;
@@ -16,9 +21,12 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
+<<<<<<< HEAD
   const [isAnimatingNo, setIsAnimatingNo] = useState(false);
   const [isAnimatingYes, setIsAnimatingYes] = useState(false);
   const [activeVote, setActiveVote] = useState<"like" | "dislike" | null>(null);
+=======
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -81,6 +89,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     return () => document.removeEventListener("mouseup", handleGlobalMouseUp);
   }, [isDragging]);
 
+<<<<<<< HEAD
   const handleVote = (type: "like" | "dislike") => {
     setActiveVote(type);
     
@@ -113,6 +122,18 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       <div 
         ref={cardRef}
         className="bg-white rounded-2xl shadow-lg p-6 md:p-8 w-full max-w-2xl mx-auto flex flex-col"
+=======
+  const cardStyle = {
+    transform: `translate(${dragOffset.x}px, ${dragOffset.y}px) rotate(${dragOffset.x * 0.1}deg)`,
+    cursor: isDragging ? "grabbing" : "grab",
+  };
+
+  return (
+    <div className="flex flex-col justify-center items-center min-h-[50vh] p-2 gap-2">
+      <Card
+        ref={cardRef}
+        className="w-full max-w-md min-h-[350px] flex flex-col"
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
         style={cardStyle}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
@@ -121,6 +142,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
       >
+<<<<<<< HEAD
         <div className="text-center mb-6 mt-6 flex-1 flex flex-col justify-center">
           <div className="inline-block bg-blue-100 text-blue-800 px-3 py-1 md:px-4 md:py-2 rounded-full text-sm font-medium mb-4">
             {question.category}
@@ -162,9 +184,37 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
             👍 Yes
           </Button>
         </div>
+=======
+        <CardContent className="flex-1 flex items-center justify-center">
+          <h2 className="text-xl font-semibold text-center">{question.question}</h2>
+        </CardContent>
+      </Card>
+      
+      <div className="flex justify-between gap-4 w-full max-w-md">
+        <Button
+          variant="destructive"
+          size="lg"
+          className="flex-1"
+          onClick={() => onVote("dislike")}
+        >
+          NO
+        </Button>
+        <Button
+          variant="success"
+          size="lg"
+          className="flex-1"
+          onClick={() => onVote("like")}
+        >
+          YES
+        </Button>
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default QuestionCard;
+=======
+export default QuestionCard; 
+>>>>>>> 6f8a7b4 (feat: Initial commit - Pulsy application with interactive question cards and swipe functionality)

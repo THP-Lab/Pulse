@@ -1,11 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import type { Question } from "../types/index";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
 interface QuestionCardProps {
   question: Question;
-  onVote: (vote: "like" | "dislike") => void;
+  onVote: (vote: "like" | "dislike" | "idk") => void;
   onSwipe: (direction: "left" | "right") => void;
 }
 
@@ -17,6 +16,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
+  const [isAnimating, setIsAnimating] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -79,16 +79,23 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     return () => document.removeEventListener("mouseup", handleGlobalMouseUp);
   }, [isDragging]);
 
+  const handleVote = (vote: "like" | "dislike" | "idk") => {
+    setIsAnimating(true);
+    setTimeout(() => {
+      onVote(vote);
+      setIsAnimating(false);
+    }, 200);
+  };
+
   const cardStyle = {
     transform: `translate(${dragOffset.x}px, ${dragOffset.y}px) rotate(${dragOffset.x * 0.1}deg)`,
     cursor: isDragging ? "grabbing" : "grab",
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-[50vh] p-2 gap-2">
-      <Card
-        ref={cardRef}
-        className="w-full max-w-md min-h-[350px] flex flex-col"
+    <div className={`transition-transform duration-200 ${isAnimating ? "scale-95" : "scale-100"}`}>
+      <div 
+        className="bg-white rounded-2xl shadow-lg p-8 mb-8"
         style={cardStyle}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
@@ -97,28 +104,36 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
       >
-        <CardContent className="flex-1 flex items-center justify-center">
-          <h2 className="text-xl font-semibold text-center">{question.question}</h2>
-        </CardContent>
-      </Card>
-      
-      <div className="flex justify-between gap-4 w-full max-w-md">
-        <Button
-          variant="destructive"
-          size="lg"
-          className="flex-1"
-          onClick={() => onVote("dislike")}
-        >
-          NO
-        </Button>
-        <Button
-          variant="success"
-          size="lg"
-          className="flex-1"
-          onClick={() => onVote("like")}
-        >
-          YES
-        </Button>
+        <div className="text-center mb-8">
+          <p className="text-xl text-gray-800 leading-relaxed">{question.question}</p>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button
+            onClick={() => handleVote("dislike")}
+            variant="outline"
+            size="lg"
+            className="flex-1 py-4 text-lg border-red-200 text-red-600 hover:bg-red-50 hover:border-red-300"
+          >
+            👎 No
+          </Button>
+          <Button
+            onClick={() => handleVote("idk")}
+            variant="outline"
+            size="lg"
+            className="flex-1 py-4 text-lg border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300"
+          >
+            🤷 IDK
+          </Button>
+          <Button
+            onClick={() => handleVote("like")}
+            variant="outline"
+            size="lg"
+            className="flex-1 py-4 text-lg border-green-200 text-green-600 hover:bg-green-50 hover:border-green-300"
+          >
+            👍 Yes
+          </Button>
+        </div>
       </div>
     </div>
   );

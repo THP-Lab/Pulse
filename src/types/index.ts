@@ -6,7 +6,7 @@ export interface Question {
 
 export interface UserVote {
   questionId: string;
-  vote: 'like' | 'dislike';
+  vote: 'like' | 'dislike' | 'idk';
   timestamp: Date;
 }
 

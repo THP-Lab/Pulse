@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 interface QuestionCardProps {
   question: Question;
-  onVote: (vote: "like" | "dislike" | "idk") => void;
+  onVote: (vote: "like" | "dislike") => void;
   onSwipe: (direction: "left" | "right") => void;
 }
 
@@ -16,7 +16,9 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isAnimatingNo, setIsAnimatingNo] = useState(false);
+  const [isAnimatingYes, setIsAnimatingYes] = useState(false);
+  const [activeVote, setActiveVote] = useState<"like" | "dislike" | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -79,23 +81,38 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
     return () => document.removeEventListener("mouseup", handleGlobalMouseUp);
   }, [isDragging]);
 
-  const handleVote = (vote: "like" | "dislike" | "idk") => {
-    setIsAnimating(true);
+  const handleVote = (type: "like" | "dislike") => {
+    setActiveVote(type);
+    
+    if (type === "dislike") {
+      setIsAnimatingNo(true);
+      setTimeout(() => setIsAnimatingNo(false), 200);
+    } else {
+      setIsAnimatingYes(true);
+      setTimeout(() => setIsAnimatingYes(false), 200);
+    }
+    
     setTimeout(() => {
-      onVote(vote);
-      setIsAnimating(false);
+      onVote(type);
+      setActiveVote(null);
     }, 200);
   };
 
   const cardStyle = {
-    transform: `translate(${dragOffset.x}px, ${dragOffset.y}px) rotate(${dragOffset.x * 0.1}deg)`,
+    transform: isDragging 
+      ? `translate(${dragOffset.x}px, ${dragOffset.y}px)` 
+      : "none",
     cursor: isDragging ? "grabbing" : "grab",
+    transition: isDragging ? "none" : "transform 0.3s ease",
+    minHeight: "400px",
   };
 
   return (
-    <div className={`transition-transform duration-200 ${isAnimating ? "scale-95" : "scale-100"}`}>
+    <div className="flex flex-col items-center w-full px-4">
+      {/* Carte principale */}
       <div 
-        className="bg-white rounded-2xl shadow-lg p-8 mb-8"
+        ref={cardRef}
+        className="bg-white rounded-2xl shadow-lg p-6 md:p-8 w-full max-w-2xl mx-auto flex flex-col"
         style={cardStyle}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
@@ -104,32 +121,43 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
       >
-        <div className="text-center mb-8">
-          <p className="text-xl text-gray-800 leading-relaxed">{question.question}</p>
+        <div className="text-center mb-6 mt-6 flex-1 flex flex-col justify-center">
+          <div className="inline-block bg-blue-100 text-blue-800 px-3 py-1 md:px-4 md:py-2 rounded-full text-sm font-medium mb-4">
+            {question.category}
+          </div>
+          <p className="text-lg md:text-xl text-gray-800 leading-relaxed flex-1 px-2">
+            {question.question}
+          </p>
         </div>
+      </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      {/* Boutons de vote - même largeur que la carte */}
+      <div className="flex flex-col sm:flex-row gap-3 justify-center w-full max-w-2xl mt-6">
+        <div className={`transition-transform duration-200 ${isAnimatingNo ? "scale-95" : "scale-100"} w-full`}>
           <Button
             onClick={() => handleVote("dislike")}
-            variant="outline"
+            variant={activeVote === "dislike" ? "default" : "outline"}
             size="lg"
-            className="flex-1 py-4 text-lg border-red-200 text-red-600 hover:bg-red-50 hover:border-red-300"
+            className={`w-full py-4 text-lg ${
+              activeVote === "dislike" 
+                ? "bg-red-500 text-white hover:bg-red-600 border-red-500" 
+                : "border-red-200 text-red-600 hover:bg-red-50 hover:border-red-300"
+            }`}
           >
             👎 No
           </Button>
-          <Button
-            onClick={() => handleVote("idk")}
-            variant="outline"
-            size="lg"
-            className="flex-1 py-4 text-lg border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300"
-          >
-            🤷 IDK
-          </Button>
+        </div>
+    
+        <div className={`transition-transform duration-200 ${isAnimatingYes ? "scale-95" : "scale-100"} w-full`}>
           <Button
             onClick={() => handleVote("like")}
-            variant="outline"
+            variant={activeVote === "like" ? "default" : "outline"}
             size="lg"
-            className="flex-1 py-4 text-lg border-green-200 text-green-600 hover:bg-green-50 hover:border-green-300"
+            className={`w-full py-4 text-lg ${
+              activeVote === "like" 
+                ? "bg-green-500 text-white hover:bg-green-600 border-green-500" 
+                : "border-green-200 text-green-600 hover:bg-green-50 hover:border-green-300"
+            }`}
           >
             👍 Yes
           </Button>
@@ -139,4 +167,4 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   );
 };
 
-export default QuestionCard; 
+export default QuestionCard;

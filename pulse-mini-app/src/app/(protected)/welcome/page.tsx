@@ -4,65 +4,14 @@ import { Page } from '@/components/PageLayout';
 import { Button, TopBar } from '@worldcoin/mini-apps-ui-kit-react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-
-// Configuration des thèmes (répétée pour l'instant)
-const THEMES = [
-  {
-    id: 'ia',
-    name: 'Intelligence Artificielle',
-    description: 'IA, Machine Learning & Technologies du futur',
-    icon: '🤖',
-    color: '#6366f1',
-    gradient: 'from-indigo-500 to-purple-600'
-  },
-  {
-    id: 'defi',
-    name: 'DeFi',
-    description: 'Finance décentralisée & Cryptomonnaies',
-    icon: '💰',
-    color: '#10b981',
-    gradient: 'from-emerald-500 to-teal-600'
-  },
-  {
-    id: 'gaming',
-    name: 'Gaming',
-    description: 'Jeux vidéo, Métaverse & Divertissement',
-    icon: '🎮',
-    color: '#f59e0b',
-    gradient: 'from-amber-500 to-orange-600'
-  },
-  {
-    id: 'identity',
-    name: 'Identité Numérique',
-    description: 'Vérification, Authentification & Sécurité',
-    icon: '🆔',
-    color: '#3b82f6',
-    gradient: 'from-blue-500 to-cyan-600'
-  },
-  {
-    id: 'art',
-    name: 'Art & NFT',
-    description: 'Création digitale, NFT & Expression artistique',
-    icon: '🎨',
-    color: '#ec4899',
-    gradient: 'from-pink-500 to-rose-600'
-  },
-  {
-    id: 'social',
-    name: 'Social',
-    description: 'Communautés, Réseaux & Interactions',
-    icon: '🌐',
-    color: '#8b5cf6',
-    gradient: 'from-violet-500 to-purple-600'
-  }
-];
+import { getThemeById } from '@/config/themes';
+import { ThemeIcon } from '@/components/ThemeIcon';
 
 export default function WelcomePage() {
   const [selectedTheme, setSelectedTheme] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
-  // Charger le thème sélectionné au montage du composant
   useEffect(() => {
     const loadThemePreference = () => {
       try {
@@ -82,8 +31,7 @@ export default function WelcomePage() {
     loadThemePreference();
   }, []);
 
-  // Trouver les détails du thème sélectionné
-  const currentTheme = THEMES.find(theme => theme.id === selectedTheme);
+  const currentTheme = selectedTheme ? getThemeById(selectedTheme) : null;
 
   const handleChangeTheme = () => {
     router.push('/theme-choice');
@@ -99,7 +47,7 @@ export default function WelcomePage() {
         <Page.Main className="flex flex-col items-center justify-center min-h-screen">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
-            <p className="text-gray-500">Chargement...</p>
+            <p className="text-gray-500">Loading...</p>
           </div>
         </Page.Main>
       </Page>
@@ -110,37 +58,40 @@ export default function WelcomePage() {
     <>
       <Page.Header className="p-0">
         <TopBar
-          title="Bienvenue !"
+          title="Welcome!"
         />
       </Page.Header>
       
       <Page.Main className="flex flex-col items-center justify-center gap-8 mb-20 px-4">
-        {/* Message principal */}
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
-            👋 Hello World !
+            👋 Hello World!
           </h1>
           <p className="text-lg text-gray-600 mb-2">
-            Bon retour sur Pulse !
+            Welcome back to Pulse!
           </p>
           <p className="text-sm text-gray-500">
-            Vous êtes connecté et vérifié ✅
+            You are connected and verified ✅
           </p>
         </div>
 
-        {/* Affichage du thème sélectionné */}
         {currentTheme && (
           <div className="w-full max-w-sm">
             <h2 className="text-lg font-semibold text-gray-800 mb-4 text-center">
-              Votre thème préféré :
+              Your preferred theme:
             </h2>
             
             <div className={`
               bg-gradient-to-br ${currentTheme.gradient} 
               rounded-2xl p-6 text-white text-center shadow-lg
             `}>
-              <div className="text-4xl mb-3">
-                {currentTheme.icon}
+              <div className="mb-3 flex justify-center">
+                <ThemeIcon 
+                  icon={currentTheme.icon} 
+                  name={currentTheme.name} 
+                  size={64} 
+                  className="rounded-lg"
+                />
               </div>
               <h3 className="text-xl font-bold mb-2">
                 {currentTheme.name}
@@ -152,19 +103,17 @@ export default function WelcomePage() {
           </div>
         )}
 
-        {/* Si pas de thème trouvé */}
         {!currentTheme && (
           <div className="text-center p-6 bg-gray-50 rounded-lg">
             <p className="text-gray-600 mb-2">
-              Aucun thème sélectionné
+              No theme selected
             </p>
             <p className="text-sm text-gray-500">
-              Choisissez un thème pour personnaliser votre expérience
+              Choose a theme to personalize your experience
             </p>
           </div>
         )}
 
-        {/* Boutons d'actions */}
         <div className="flex flex-col gap-4 w-full max-w-sm">
           <Button
             onClick={handleChangeTheme}
@@ -172,7 +121,7 @@ export default function WelcomePage() {
             variant="secondary"
             className="w-full"
           >
-            🎨 Changer de thème
+            🎨 Change Theme
           </Button>
           
           <Button
@@ -181,17 +130,16 @@ export default function WelcomePage() {
             variant="primary"
             className="w-full"
           >
-            🏠 Accéder à l'app
+            🏠 Go to App
           </Button>
         </div>
 
-        {/* Informations supplémentaires */}
         <div className="text-center text-xs text-gray-500 mt-4">
           <p>
-            Vous êtes maintenant prêt à utiliser Pulse !
+            You are now ready to use Pulse!
           </p>
           <p className="mt-1">
-            Votre session est automatiquement sauvegardée
+            Your session is automatically saved
           </p>
         </div>
       </Page.Main>

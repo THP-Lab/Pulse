@@ -15,8 +15,8 @@ import {
     WalletClient,
   } from 'viem'
   
-  import { EthMultiVaultAbi } from './ethMultiVault-abi'
-  import { intuitionDeployments } from './deployments'
+  import { EthMultiVaultAbi } from './ethmultivault-abi'
+  import { intuitionDeployments } from './deployment'
   
   export class EthMultiVault {
     public readonly contract: GetContractReturnType<

@@ -40,20 +40,10 @@ jobs:
           node-version: 20
           cache: "pnpm"
       - name: Install dependencies
-        run: run: pnpm install cd && --no-frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
       - name: Build
         run: pnpm run build
-        env:
-          VITE_PRIVY_APP_ID: ${{ secrets.VITE_PRIVY_APP_ID }}
-          VITE_STRIPE_PUBLIC_KEY: ${{ secrets.VITE_STRIPE_PUBLIC_KEY }}
-          VITE_UMAMI_API_CLIENT_SECRET: ${{ secrets.VITE_UMAMI_API_CLIENT_SECRET }}
-          VITE_UMAMI_API_CLIENT_USER_ID: ${{ secrets.VITE_UMAMI_API_CLIENT_USER_ID }}
-          VITE_API_URL: ${{ vars.VITE_API_URL }}
-          VITE_BACKEND_PROD_URL: ${{ vars.VITE_BACKEND_PROD_URL }}
-          VITE_FRONTEND_PROD_URL: ${{ vars.VITE_FRONTEND_PROD_URL }}
-          VITE_STRIPE_PRICE_ID: ${{ vars.VITE_STRIPE_PRICE_ID }}
-          VITE_STRIPE_DONATION_PRODUCT_ID: ${{ vars.VITE_STRIPE_DONATION_PRODUCT_ID }}
-          VITE_UMAMI_API_ORIGIN: ${{ vars.VITE_UMAMI_API_ORIGIN }}
+z
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

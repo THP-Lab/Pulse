@@ -3,6 +3,7 @@
 import { Button } from '@worldcoin/mini-apps-ui-kit-react';
 import { clsx } from 'clsx';
 import { useState } from 'react';
+import { ThemeIcon } from '@/components/ThemeIcon';
 
 export interface ThemeCardProps {
   id: string;
@@ -47,8 +48,13 @@ export const ThemeCard = ({
       )}
       
       <div className="relative z-10 flex flex-col items-center text-center text-white">
-        <div className="text-4xl mb-3">
-          {icon}
+        <div className="mb-3 flex items-center justify-center h-16 w-16">
+          <ThemeIcon 
+            icon={icon} 
+            name={name} 
+            size={64} 
+            className="rounded-lg" 
+          />
         </div>
         
         <h3 className="text-xl font-bold mb-2">
@@ -72,7 +78,7 @@ export const ThemeCard = ({
               'text-white font-medium'
             )}
           >
-            {isSelected ? '✓ Sélectionné' : 'Choisir'}
+            {isSelected ? '✓ Selected' : 'Choose'}
           </Button>
         </div>
       </div>

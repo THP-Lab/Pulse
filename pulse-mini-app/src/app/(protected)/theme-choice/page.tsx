@@ -1,61 +1,12 @@
 'use client';
 
 import { ThemeCard } from '@/components/ThemeCard';
+import { AnimatedText } from '@/components/AnimatedText';
 import { Page } from '@/components/PageLayout';
 import { Button, LiveFeedback, TopBar } from '@worldcoin/mini-apps-ui-kit-react';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-
-const THEMES = [
-  {
-    id: 'ia',
-    name: 'Intelligence Artificielle',
-    description: 'IA, Machine Learning & Technologies du futur',
-    icon: '🤖',
-    color: '#6366f1',
-    gradient: 'from-indigo-500 to-purple-600'
-  },
-  {
-    id: 'defi',
-    name: 'DeFi',
-    description: 'Finance décentralisée & Cryptomonnaies',
-    icon: '💰',
-    color: '#10b981',
-    gradient: 'from-emerald-500 to-teal-600'
-  },
-  {
-    id: 'gaming',
-    name: 'Gaming',
-    description: 'Jeux vidéo, Métaverse & Divertissement',
-    icon: '🎮',
-    color: '#f59e0b',
-    gradient: 'from-amber-500 to-orange-600'
-  },
-  {
-    id: 'identity',
-    name: 'Identité Numérique',
-    description: 'Vérification, Authentification & Sécurité',
-    icon: '🆔',
-    color: '#3b82f6',
-    gradient: 'from-blue-500 to-cyan-600'
-  },
-  {
-    id: 'art',
-    name: 'Art & NFT',
-    description: 'Création digitale, NFT & Expression artistique',
-    icon: '🎨',
-    color: '#ec4899',
-    gradient: 'from-pink-500 to-rose-600'
-  },
-  {
-    id: 'social',
-    name: 'Social',
-    description: 'Communautés, Réseaux & Interactions',
-    icon: '🌐',
-    color: '#8b5cf6',
-    gradient: 'from-violet-500 to-purple-600'
-  }
-];
+import { THEMES } from '@/config/themes';
 
 const saveThemePreference = (theme: string): void => {
   try {
@@ -107,18 +58,16 @@ export default function ThemeChoicePage() {
     <>
       <Page.Header className="p-0">
         <TopBar
-          title="Choisir votre thème"
+          title="Choose Your Theme"
         />
       </Page.Header>
       
       <Page.Main className="flex flex-col items-center justify-start gap-6 mb-20 px-4">
         <div className="text-center mb-4">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">
-            🎉 Bienvenue sur Pulse !
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            <span className="font-extrabold">Pulse</span>
           </h1>
-          <p className="text-gray-600 text-sm">
-            Choisissez votre thème préféré pour personnaliser votre expérience
-          </p>
+          <AnimatedText className="mb-2" />
         </div>
         
         <div className="grid grid-cols-2 gap-4 w-full max-w-md">
@@ -141,9 +90,9 @@ export default function ThemeChoicePage() {
           <div className="w-full max-w-md mt-6">
             <LiveFeedback
               label={{
-                failed: 'Erreur lors de la sauvegarde',
-                pending: 'Sauvegarde en cours...',
-                success: 'Thème sauvegardé !'
+                failed: 'Error saving preference',
+                pending: 'Saving...',
+                success: 'Theme saved!'
               }}
               state={isConfirming ? 'pending' : undefined}
             >
@@ -154,14 +103,14 @@ export default function ThemeChoicePage() {
                 variant="primary"
                 className="w-full"
               >
-                {isConfirming ? 'Sauvegarde...' : 'Confirmer mon choix'}
+                {isConfirming ? 'Saving...' : 'Confirm Choice'}
               </Button>
             </LiveFeedback>
           </div>
         )}
 
         <div className="text-center text-xs text-gray-500 mt-4">
-          <p>Vous pourrez changer de thème plus tard dans les paramètres</p>
+          <p>You can change your theme later in settings</p>
         </div>
       </Page.Main>
     </>

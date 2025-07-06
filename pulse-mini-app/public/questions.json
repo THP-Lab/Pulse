@@ -1,0 +1,154 @@
+{
+    "questions": [
+      {
+        "id": "1",
+        "category": "Gaming (GameFi)",
+        "question": "Do you believe that play-to-earn gaming will become mainstream in Web3?",
+        "rdfTriple": {
+          "subject": "User",
+          "predicate": "believes_in",
+          "object": "play_to_earn_mainstream"
+        },
+        "communityStats": {
+          "like": 72,
+          "dislike": 28,
+          "totalVotes": 1456
+        }
+      },
+      {
+        "id": "2",
+        "category": "Artificial Intelligence (AI)",
+        "question": "Should AI models be tokenized and owned as digital assets?",
+        "rdfTriple": {
+          "subject": "User",
+          "predicate": "supports",
+          "object": "ai_tokenization"
+        },
+        "communityStats": {
+          "like": 58,
+          "dislike": 42,
+          "totalVotes": 987
+        }
+      },
+      {
+        "id": "3",
+        "category": "DeFi",
+        "question": "Will DeFi protocols replace traditional banking for most people?",
+        "rdfTriple": {
+          "subject": "User",
+          "predicate": "predicts",
+          "object": "defi_banking_replacement"
+        },
+        "communityStats": {
+          "like": 45,
+          "dislike": 55,
+          "totalVotes": 1823
+        }
+      },
+      {
+        "id": "4",
+        "category": "Real World Assets (RWA)",
+        "question": "Should real estate be tokenized on blockchain for fractional ownership?",
+        "rdfTriple": {
+          "subject": "User",
+          "predicate": "advocates_for",
+          "object": "real_estate_tokenization"
+        },
+        "communityStats": {
+          "like": 85,
+          "dislike": 15,
+          "totalVotes": 1234
+        }
+      },
+      {
+        "id": "5",
+        "category": "Decentralized Identifier",
+        "question": "Do you want full control over your digital identity without intermediaries?",
+        "rdfTriple": {
+          "subject": "User",
+          "predicate": "prefers",
+          "object": "decentralized_identity_control"
+        },
+        "communityStats": {
+          "like": 92,
+          "dislike": 8,
+          "totalVotes": 2103
+        }
+      },
+      {
+        "id": "6",
+        "category": "DePIN",
+        "question": "Will decentralized physical infrastructure networks revolutionize IoT?",
+        "rdfTriple": {
+          "subject": "User",
+          "predicate": "believes_in",
+          "object": "depin_iot_revolution"
+        },
+        "communityStats": {
+          "like": 67,
+          "dislike": 33,
+          "totalVotes": 856
+        }
+      },
+      {
+        "id": "7",
+        "category": "Prediction Markets",
+        "question": "Are prediction markets better than traditional polling for forecasting?",
+        "rdfTriple": {
+          "subject": "User",
+          "predicate": "compares_positively",
+          "object": "prediction_markets_vs_polling"
+        },
+        "communityStats": {
+          "like": 76,
+          "dislike": 24,
+          "totalVotes": 1567
+        }
+      },
+      {
+        "id": "8",
+        "category": "Centralized Exchange (CEX)",
+        "question": "Will centralized exchanges remain necessary despite DEX growth?",
+        "rdfTriple": {
+          "subject": "User",
+          "predicate": "predicts_necessity_of",
+          "object": "centralized_exchanges_future"
+        },
+        "communityStats": {
+          "like": 63,
+          "dislike": 37,
+          "totalVotes": 1789
+        }
+      },
+      {
+        "id": "9",
+        "category": "Gaming (GameFi)",
+        "question": "Should in-game NFTs be transferable across different games?",
+        "rdfTriple": {
+          "subject": "User",
+          "predicate": "supports",
+          "object": "cross_game_nft_transfer"
+        },
+        "communityStats": {
+          "like": 89,
+          "dislike": 11,
+          "totalVotes": 1345
+        }
+      },
+      {
+        "id": "10",
+        "category": "Artificial Intelligence (AI)",
+        "question": "Do you trust AI agents to manage your DeFi portfolio autonomously?",
+        "rdfTriple": {
+          "subject": "User",
+          "predicate": "trusts",
+          "object": "ai_portfolio_management"
+        },
+        "communityStats": {
+          "like": 34,
+          "dislike": 66,
+          "totalVotes": 923
+        }
+      }
+    ]
+  }

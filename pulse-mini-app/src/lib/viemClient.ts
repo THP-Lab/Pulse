@@ -1,13 +1,9 @@
 // lib/viemClient.ts
 import { createPublicClient, createWalletClient, http } from 'viem'
 import { worldchain } from 'viem/chains'
-import { injected } from 'viem/wallet'
 
 export async function getClients() {
-  const walletClient = createWalletClient({
-    chain: worldchain,
-    transport: injected(),
-  })
+
 
   const publicClient = createPublicClient({
     chain: worldchain,
@@ -15,7 +11,6 @@ export async function getClients() {
   })
 
   return {
-    walletClient: await walletClient.requestAddresses().then(() => walletClient),
     publicClient
   }
 }

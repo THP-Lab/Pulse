@@ -1,4 +1,7 @@
-import { useCreatePosition } from '../src/hooks/useCreatePosition'
+import { useCreatePosition } from '../src/hook/useCreatePosition'
+import { Button, LiveFeedback } from '@worldcoin/mini-apps-ui-kit-react';
+import { useState } from 'react';
+
 
 const VoteButton = ({ userAddress, vaultId }: { userAddress: string, vaultId: bigint }) => {
   const [buttonState, setButtonState] = useState<'pending' | 'success' | 'failed' | undefined>()
@@ -19,6 +22,7 @@ const VoteButton = ({ userAddress, vaultId }: { userAddress: string, vaultId: bi
       console.log('Success, tx id:', txId)
       setButtonState('success')
     } catch (err) {
+      console.log('Error, tx id:', err)
       setButtonState('failed')
       setTimeout(() => setButtonState(undefined), 3000)
     }

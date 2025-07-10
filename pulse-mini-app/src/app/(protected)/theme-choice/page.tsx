@@ -7,6 +7,7 @@ import { MiniKit } from '@worldcoin/minikit-js'
 import { useWaitForTransactionReceipt } from '@worldcoin/minikit-react'
 import { createPublicClient, http } from 'viem'
 import { worldchain } from 'viem/chains'
+import { EthMultiVaultAbi } from '@/multivault/ethmultivault-abi'
 
 import { ThemeCard } from '@/components/ThemeCard'
 import { Page } from '@/components/PageLayout'
@@ -128,12 +129,14 @@ export default function ThemeChoicePage() {
     setTransactionId('')
 
     try {
+      console.log(EthMultiVaultAbi.find(f => f.name === "depositTriple"))
+
       const vaultId = themeVaultMap[selectedTheme]
       const user = await MiniKit.getUserByUsername('alex')
       const res = await MiniKit.commandsAsync.sendTransaction({
         transaction: [{
-          address: '0x...', // Adresse du contrat Multivault
-          abi: [], // L’ABI du contrat Multivault
+          address: '0xd8a0361f1e172Cce3e7597EbfDeD30C432307272',
+          abi: EthMultiVaultAbi,
           functionName: 'depositTriple',
           args: [user.walletAddress, vaultId],
         }]
